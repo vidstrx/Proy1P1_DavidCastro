@@ -7,55 +7,48 @@ package tiendaderopa;
  */
 public class Persona {
     private String nombre;
+    private int edad;
+    private int id;
     private int dineroDisp;
-    private String colorPref;
-    private int talla;
-
+    
     public Persona() {
-    }
-
-    public Persona(String nombre, int dineroDisp, String colorPref, int talla) {
-        this.nombre = nombre;
-        this.dineroDisp = dineroDisp;
-        this.colorPref = colorPref;
-        this.talla = talla;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public int getDineroDisp() {
-        return dineroDisp;
-    }
-
-    public String getColorPref() {
-        return colorPref;
-    }
-
-    public int getTalla() {
-        return talla;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getDineroDisp() {
+        return dineroDisp;
     }
 
     public void setDineroDisp(int dineroDisp) {
         this.dineroDisp = dineroDisp;
     }
 
-    public void setColorPref(String colorPref) {
-        this.colorPref = colorPref;
-    }
-
-    public void setTalla(int talla) {
-        this.talla = talla;
-    }
-
     @Override
     public String toString() {
-        return "-----Persona-----" + "\nNombre: " + nombre + "\nDinero disponible: " + dineroDisp + "\nColor preferido: " + colorPref + "\nTalla: " + talla;
+        return "-----Persona-----" + "\nNombre: " + nombre + "\nEdad: " + edad + "\nID: " + id + "\nDinero disponible: " + dineroDisp;
     }
     
     
