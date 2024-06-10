@@ -5,6 +5,8 @@
 package tiendaderopa;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -12,6 +14,13 @@ import java.awt.Color;
  */
 public class VentanaMenuTienda extends javax.swing.JFrame {
 
+    public static ArrayList <Ropa> camisas = new ArrayList();
+    public static ArrayList <Ropa> pantalones = new ArrayList();
+    public static ArrayList <Ropa> gorras = new ArrayList();
+    public static ArrayList <Ropa> sueteres = new ArrayList();
+    public static ArrayList <Ropa> zapatos = new ArrayList();
+    public static ArrayList <Ropa> calzonetas = new ArrayList();
+    
     /**
      * Creates new form VentanaMenuTienda
      */
@@ -28,17 +37,27 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        agregarFrame = new javax.swing.JFrame();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        camisasBtn = new javax.swing.JButton();
-        pantalonesBtn = new javax.swing.JButton();
-        gorrasBtn = new javax.swing.JButton();
-        sueteresBtn = new javax.swing.JButton();
-        zapatosBtn = new javax.swing.JButton();
-        calzonetasBtn = new javax.swing.JButton();
-        atrasBtn = new javax.swing.JButton();
-        fondoAgregLabel = new javax.swing.JLabel();
+        catalogoFrame = new javax.swing.JFrame();
+        catalogoPanel = new javax.swing.JPanel();
+        catalogoLabel = new javax.swing.JLabel();
+        camisasCtlgBtn = new javax.swing.JButton();
+        pantalonesCtlgBtn = new javax.swing.JButton();
+        gorrasCtlgBtn = new javax.swing.JButton();
+        sueteresCtlgBtn = new javax.swing.JButton();
+        zapatosCtlgBtn = new javax.swing.JButton();
+        calzonetasCtlgBtn = new javax.swing.JButton();
+        atrasCtlgBtn = new javax.swing.JButton();
+        fondoCtlgLabel = new javax.swing.JLabel();
+        camisasCtlgFrame = new javax.swing.JFrame();
+        jPanel2 = new javax.swing.JPanel();
+        camisasPanel = new javax.swing.JPanel();
+        camisasLabel = new javax.swing.JLabel();
+        atrasCmsasBtn = new javax.swing.JButton();
+        camisaMngCrtaBtn = new javax.swing.JButton();
+        camisaMngLrgBtn = new javax.swing.JButton();
+        camisetaMngCrtaBtn = new javax.swing.JButton();
+        camisetaMngLrgBtn = new javax.swing.JButton();
+        fondoCmsasLabel = new javax.swing.JLabel();
         logoLabel = new javax.swing.JLabel();
         tituloLabel = new javax.swing.JLabel();
         catalogoBtn = new javax.swing.JButton();
@@ -49,129 +68,208 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         salirBtn = new javax.swing.JButton();
         fondoLabel = new javax.swing.JLabel();
 
-        agregarFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        catalogoFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        catalogoPanel.setBackground(new java.awt.Color(51, 51, 51));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel2.setText("Catalogo");
-        jPanel1.add(jLabel2);
+        catalogoLabel.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        catalogoLabel.setForeground(new java.awt.Color(204, 204, 204));
+        catalogoLabel.setText("Catalogo");
+        catalogoPanel.add(catalogoLabel);
 
-        agregarFrame.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 160, 50));
+        catalogoFrame.getContentPane().add(catalogoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 160, 50));
 
-        camisasBtn.setBackground(new java.awt.Color(51, 51, 51));
-        camisasBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
-        camisasBtn.setForeground(new java.awt.Color(204, 204, 204));
-        camisasBtn.setText("Camisas");
-        camisasBtn.setBorder(null);
-        camisasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        camisasCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        camisasCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        camisasCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        camisasCtlgBtn.setText("Camisas");
+        camisasCtlgBtn.setBorder(null);
+        camisasCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                camisasBtnMouseEntered(evt);
+                camisasCtlgBtnMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                camisasBtnMouseExited(evt);
+                camisasCtlgBtnMouseExited(evt);
             }
         });
-        agregarFrame.getContentPane().add(camisasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 180, 40));
-
-        pantalonesBtn.setBackground(new java.awt.Color(51, 51, 51));
-        pantalonesBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
-        pantalonesBtn.setForeground(new java.awt.Color(204, 204, 204));
-        pantalonesBtn.setText("Pantalones");
-        pantalonesBtn.setBorder(null);
-        pantalonesBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pantalonesBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pantalonesBtnMouseExited(evt);
-            }
-        });
-        agregarFrame.getContentPane().add(pantalonesBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, 40));
-
-        gorrasBtn.setBackground(new java.awt.Color(51, 51, 51));
-        gorrasBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
-        gorrasBtn.setForeground(new java.awt.Color(204, 204, 204));
-        gorrasBtn.setText("Gorras");
-        gorrasBtn.setBorder(null);
-        gorrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                gorrasBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                gorrasBtnMouseExited(evt);
-            }
-        });
-        agregarFrame.getContentPane().add(gorrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, 40));
-
-        sueteresBtn.setBackground(new java.awt.Color(51, 51, 51));
-        sueteresBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
-        sueteresBtn.setForeground(new java.awt.Color(204, 204, 204));
-        sueteresBtn.setText("Sueteres");
-        sueteresBtn.setBorder(null);
-        sueteresBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                sueteresBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                sueteresBtnMouseExited(evt);
-            }
-        });
-        agregarFrame.getContentPane().add(sueteresBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 190, 40));
-
-        zapatosBtn.setBackground(new java.awt.Color(51, 51, 51));
-        zapatosBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
-        zapatosBtn.setForeground(new java.awt.Color(204, 204, 204));
-        zapatosBtn.setText("Zapatos");
-        zapatosBtn.setBorder(null);
-        zapatosBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                zapatosBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                zapatosBtnMouseExited(evt);
-            }
-        });
-        agregarFrame.getContentPane().add(zapatosBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 190, 40));
-
-        calzonetasBtn.setBackground(new java.awt.Color(51, 51, 51));
-        calzonetasBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
-        calzonetasBtn.setForeground(new java.awt.Color(204, 204, 204));
-        calzonetasBtn.setText("Calzonetas");
-        calzonetasBtn.setBorder(null);
-        calzonetasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                calzonetasBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                calzonetasBtnMouseExited(evt);
-            }
-        });
-        agregarFrame.getContentPane().add(calzonetasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 190, 40));
-
-        atrasBtn.setBackground(new java.awt.Color(51, 51, 51));
-        atrasBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        atrasBtn.setForeground(new java.awt.Color(204, 204, 204));
-        atrasBtn.setText("Atras");
-        atrasBtn.setBorder(null);
-        atrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                atrasBtnMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                atrasBtnMouseExited(evt);
-            }
-        });
-        atrasBtn.addActionListener(new java.awt.event.ActionListener() {
+        camisasCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                atrasBtnActionPerformed(evt);
+                camisasCtlgBtnActionPerformed(evt);
             }
         });
-        agregarFrame.getContentPane().add(atrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 70, 30));
+        catalogoFrame.getContentPane().add(camisasCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 180, 40));
 
-        fondoAgregLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
-        agregarFrame.getContentPane().add(fondoAgregLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 540));
+        pantalonesCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        pantalonesCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        pantalonesCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        pantalonesCtlgBtn.setText("Pantalones");
+        pantalonesCtlgBtn.setBorder(null);
+        pantalonesCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonesCtlgBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonesCtlgBtnMouseExited(evt);
+            }
+        });
+        catalogoFrame.getContentPane().add(pantalonesCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, 40));
+
+        gorrasCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        gorrasCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        gorrasCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        gorrasCtlgBtn.setText("Gorras");
+        gorrasCtlgBtn.setBorder(null);
+        gorrasCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorrasCtlgBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorrasCtlgBtnMouseExited(evt);
+            }
+        });
+        catalogoFrame.getContentPane().add(gorrasCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, 40));
+
+        sueteresCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        sueteresCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        sueteresCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        sueteresCtlgBtn.setText("Sueteres");
+        sueteresCtlgBtn.setBorder(null);
+        sueteresCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                sueteresCtlgBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                sueteresCtlgBtnMouseExited(evt);
+            }
+        });
+        catalogoFrame.getContentPane().add(sueteresCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 190, 40));
+
+        zapatosCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        zapatosCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        zapatosCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        zapatosCtlgBtn.setText("Zapatos");
+        zapatosCtlgBtn.setBorder(null);
+        zapatosCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                zapatosCtlgBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                zapatosCtlgBtnMouseExited(evt);
+            }
+        });
+        catalogoFrame.getContentPane().add(zapatosCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 190, 40));
+
+        calzonetasCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        calzonetasCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        calzonetasCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        calzonetasCtlgBtn.setText("Calzonetas");
+        calzonetasCtlgBtn.setBorder(null);
+        calzonetasCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                calzonetasCtlgBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                calzonetasCtlgBtnMouseExited(evt);
+            }
+        });
+        catalogoFrame.getContentPane().add(calzonetasCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 190, 40));
+
+        atrasCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
+        atrasCtlgBtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        atrasCtlgBtn.setForeground(new java.awt.Color(204, 204, 204));
+        atrasCtlgBtn.setText("Atras");
+        atrasCtlgBtn.setBorder(null);
+        atrasCtlgBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasCtlgBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasCtlgBtnMouseExited(evt);
+            }
+        });
+        atrasCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasCtlgBtnActionPerformed(evt);
+            }
+        });
+        catalogoFrame.getContentPane().add(atrasCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 490, 70, 30));
+
+        fondoCtlgLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        catalogoFrame.getContentPane().add(fondoCtlgLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 540));
+
+        camisasCtlgFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        camisasPanel.setBackground(new java.awt.Color(204, 204, 204));
+        camisasPanel.setForeground(new java.awt.Color(204, 204, 204));
+        camisasPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        camisasLabel.setBackground(new java.awt.Color(51, 51, 51));
+        camisasLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        camisasLabel.setForeground(new java.awt.Color(51, 51, 51));
+        camisasLabel.setText("Camisas");
+        camisasPanel.add(camisasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jPanel2.add(camisasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 110, 50));
+
+        atrasCmsasBtn.setBackground(new java.awt.Color(204, 204, 204));
+        atrasCmsasBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasCmsasBtn.setForeground(new java.awt.Color(51, 51, 51));
+        atrasCmsasBtn.setText("Atras");
+        atrasCmsasBtn.setBorder(null);
+        atrasCmsasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasCmsasBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasCmsasBtnMouseExited(evt);
+            }
+        });
+        atrasCmsasBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasCmsasBtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(atrasCmsasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 30));
+
+        camisaMngCrtaBtn.setBackground(new java.awt.Color(204, 204, 204));
+        camisaMngCrtaBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        camisaMngCrtaBtn.setForeground(new java.awt.Color(51, 51, 51));
+        camisaMngCrtaBtn.setText("Camisa manga corta");
+        camisaMngCrtaBtn.setBorder(null);
+        camisaMngCrtaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                camisaMngCrtaBtnActionPerformed(evt);
+            }
+        });
+        jPanel2.add(camisaMngCrtaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 160, 30));
+
+        camisaMngLrgBtn.setBackground(new java.awt.Color(204, 204, 204));
+        camisaMngLrgBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        camisaMngLrgBtn.setForeground(new java.awt.Color(51, 51, 51));
+        camisaMngLrgBtn.setText("Camisa manga larga");
+        camisaMngLrgBtn.setBorder(null);
+        jPanel2.add(camisaMngLrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 160, 30));
+
+        camisetaMngCrtaBtn.setBackground(new java.awt.Color(204, 204, 204));
+        camisetaMngCrtaBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        camisetaMngCrtaBtn.setForeground(new java.awt.Color(51, 51, 51));
+        camisetaMngCrtaBtn.setText("Camiseta manga corta");
+        camisetaMngCrtaBtn.setBorder(null);
+        jPanel2.add(camisetaMngCrtaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 180, 30));
+
+        camisetaMngLrgBtn.setBackground(new java.awt.Color(204, 204, 204));
+        camisetaMngLrgBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        camisetaMngLrgBtn.setForeground(new java.awt.Color(51, 51, 51));
+        camisetaMngLrgBtn.setText("Camiseta manga larga");
+        camisetaMngLrgBtn.setBorder(null);
+        jPanel2.add(camisetaMngLrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 180, 30));
+
+        fondoCmsasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        jPanel2.add(fondoCmsasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        camisasCtlgFrame.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -325,76 +423,105 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
         System.out.println("Gracias por visitarnos :D");
-        System.exit(0);
+        System.exit(0); // esta instruccion sale del todo el programa cuando se presiona el boton salir en el menu de la tienda.
     }//GEN-LAST:event_salirBtnActionPerformed
 
     private void catalogoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoBtnActionPerformed
         setVisible(false);
-        agregarFrame.pack();
-        agregarFrame.setVisible(true);
-        agregarFrame.setLocationRelativeTo(null);
+        catalogoFrame.pack();
+        catalogoFrame.setVisible(true);
+        catalogoFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_catalogoBtnActionPerformed
 
-    private void camisasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_camisasBtnMouseEntered
-        camisasBtn.setBackground(Color.BLACK);
-    }//GEN-LAST:event_camisasBtnMouseEntered
+    private void camisasCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_camisasCtlgBtnMouseEntered
+        camisasCtlgBtn.setBackground(Color.BLACK);
+    }//GEN-LAST:event_camisasCtlgBtnMouseEntered
 
-    private void camisasBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_camisasBtnMouseExited
-        camisasBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_camisasBtnMouseExited
+    private void camisasCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_camisasCtlgBtnMouseExited
+        camisasCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_camisasCtlgBtnMouseExited
 
-    private void pantalonesBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonesBtnMouseEntered
-        pantalonesBtn.setBackground(Color.BLACK);
-    }//GEN-LAST:event_pantalonesBtnMouseEntered
+    private void pantalonesCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonesCtlgBtnMouseEntered
+        pantalonesCtlgBtn.setBackground(Color.BLACK);
+    }//GEN-LAST:event_pantalonesCtlgBtnMouseEntered
 
-    private void pantalonesBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonesBtnMouseExited
-        pantalonesBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_pantalonesBtnMouseExited
+    private void pantalonesCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonesCtlgBtnMouseExited
+        pantalonesCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_pantalonesCtlgBtnMouseExited
 
-    private void gorrasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorrasBtnMouseEntered
-        gorrasBtn.setBackground(Color.BLACK);
-    }//GEN-LAST:event_gorrasBtnMouseEntered
+    private void gorrasCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorrasCtlgBtnMouseEntered
+        gorrasCtlgBtn.setBackground(Color.BLACK);
+    }//GEN-LAST:event_gorrasCtlgBtnMouseEntered
 
-    private void gorrasBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorrasBtnMouseExited
-        gorrasBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_gorrasBtnMouseExited
+    private void gorrasCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorrasCtlgBtnMouseExited
+        gorrasCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_gorrasCtlgBtnMouseExited
 
-    private void sueteresBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sueteresBtnMouseEntered
-        sueteresBtn.setBackground(Color.BLACK);
-    }//GEN-LAST:event_sueteresBtnMouseEntered
+    private void sueteresCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sueteresCtlgBtnMouseEntered
+        sueteresCtlgBtn.setBackground(Color.BLACK);
+    }//GEN-LAST:event_sueteresCtlgBtnMouseEntered
 
-    private void sueteresBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sueteresBtnMouseExited
-        sueteresBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_sueteresBtnMouseExited
+    private void sueteresCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sueteresCtlgBtnMouseExited
+        sueteresCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_sueteresCtlgBtnMouseExited
 
-    private void zapatosBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zapatosBtnMouseEntered
-        zapatosBtn.setBackground(Color.BLACK);
-    }//GEN-LAST:event_zapatosBtnMouseEntered
+    private void zapatosCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zapatosCtlgBtnMouseEntered
+        zapatosCtlgBtn.setBackground(Color.BLACK);
+    }//GEN-LAST:event_zapatosCtlgBtnMouseEntered
 
-    private void zapatosBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zapatosBtnMouseExited
-        zapatosBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_zapatosBtnMouseExited
+    private void zapatosCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zapatosCtlgBtnMouseExited
+        zapatosCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_zapatosCtlgBtnMouseExited
 
-    private void calzonetasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calzonetasBtnMouseEntered
-        calzonetasBtn.setBackground(Color.BLACK);
-    }//GEN-LAST:event_calzonetasBtnMouseEntered
+    private void calzonetasCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calzonetasCtlgBtnMouseEntered
+        calzonetasCtlgBtn.setBackground(Color.BLACK);
+    }//GEN-LAST:event_calzonetasCtlgBtnMouseEntered
 
-    private void calzonetasBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calzonetasBtnMouseExited
-        calzonetasBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_calzonetasBtnMouseExited
+    private void calzonetasCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calzonetasCtlgBtnMouseExited
+        calzonetasCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_calzonetasCtlgBtnMouseExited
 
-    private void atrasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasBtnMouseEntered
-        atrasBtn.setBackground(Color.decode("#480000"));
-    }//GEN-LAST:event_atrasBtnMouseEntered
+    private void atrasCtlgBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasCtlgBtnMouseEntered
+        atrasCtlgBtn.setBackground(Color.decode("#480000"));
+    }//GEN-LAST:event_atrasCtlgBtnMouseEntered
 
-    private void atrasBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasBtnMouseExited
-        atrasBtn.setBackground(Color.decode("#333333"));
-    }//GEN-LAST:event_atrasBtnMouseExited
+    private void atrasCtlgBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasCtlgBtnMouseExited
+        atrasCtlgBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_atrasCtlgBtnMouseExited
 
-    private void atrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasBtnActionPerformed
-        agregarFrame.setVisible(false);
+    private void atrasCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasCtlgBtnActionPerformed
+        catalogoFrame.setVisible(false);
         setVisible(true);
-    }//GEN-LAST:event_atrasBtnActionPerformed
+    }//GEN-LAST:event_atrasCtlgBtnActionPerformed
+
+    private void atrasCmsasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasCmsasBtnMouseEntered
+        atrasCmsasBtn.setBackground(Color.decode("#C85D5D"));
+    }//GEN-LAST:event_atrasCmsasBtnMouseEntered
+
+    private void atrasCmsasBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasCmsasBtnMouseExited
+        atrasCmsasBtn.setBackground(Color.decode("#CCCCCC"));
+    }//GEN-LAST:event_atrasCmsasBtnMouseExited
+
+    private void atrasCmsasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasCmsasBtnActionPerformed
+        camisasCtlgFrame.setVisible(false);
+        catalogoFrame.setVisible(true);
+    }//GEN-LAST:event_atrasCmsasBtnActionPerformed
+
+    private void camisasCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camisasCtlgBtnActionPerformed
+        catalogoFrame.setVisible(false);
+        camisasCtlgFrame.pack();
+        camisasCtlgFrame.setVisible(true);
+        camisasCtlgFrame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_camisasCtlgBtnActionPerformed
+
+    private void camisaMngCrtaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camisaMngCrtaBtnActionPerformed
+        // Talvez hacer un do while hasta que la cantidad total sea 0, usar joption para conseguir el numero que ingreso e ir restando.
+        int precio = 600; int cantidadTotal = 10; String nombre = "Camisa"; String tipo = "Camisa manga corta";
+        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,precio));
+        /*for (int i = 0; i < camisas.size(); i++) {
+            System.out.println((i + 1) + "\n" + camisas.get(i));
+        }*/
+    }//GEN-LAST:event_camisaMngCrtaBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -432,25 +559,35 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFrame agregarFrame;
-    private javax.swing.JButton atrasBtn;
-    private javax.swing.JButton calzonetasBtn;
-    private javax.swing.JButton camisasBtn;
+    private javax.swing.JButton atrasCmsasBtn;
+    private javax.swing.JButton atrasCtlgBtn;
+    private javax.swing.JButton calzonetasCtlgBtn;
+    private javax.swing.JButton camisaMngCrtaBtn;
+    private javax.swing.JButton camisaMngLrgBtn;
+    private javax.swing.JButton camisasCtlgBtn;
+    private javax.swing.JFrame camisasCtlgFrame;
+    private javax.swing.JLabel camisasLabel;
+    private javax.swing.JPanel camisasPanel;
+    private javax.swing.JButton camisetaMngCrtaBtn;
+    private javax.swing.JButton camisetaMngLrgBtn;
     private javax.swing.JButton catalogoBtn;
+    private javax.swing.JFrame catalogoFrame;
+    private javax.swing.JLabel catalogoLabel;
+    private javax.swing.JPanel catalogoPanel;
     private javax.swing.JButton comprarBtn;
     private javax.swing.JButton eliminarBtn;
-    private javax.swing.JLabel fondoAgregLabel;
+    private javax.swing.JLabel fondoCmsasLabel;
+    private javax.swing.JLabel fondoCtlgLabel;
     private javax.swing.JLabel fondoLabel;
-    private javax.swing.JButton gorrasBtn;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton gorrasCtlgBtn;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JLabel menuTituloLabel;
     private javax.swing.JButton mostrarBtn;
-    private javax.swing.JButton pantalonesBtn;
+    private javax.swing.JButton pantalonesCtlgBtn;
     private javax.swing.JButton salirBtn;
-    private javax.swing.JButton sueteresBtn;
+    private javax.swing.JButton sueteresCtlgBtn;
     private javax.swing.JLabel tituloLabel;
-    private javax.swing.JButton zapatosBtn;
+    private javax.swing.JButton zapatosCtlgBtn;
     // End of variables declaration//GEN-END:variables
 }

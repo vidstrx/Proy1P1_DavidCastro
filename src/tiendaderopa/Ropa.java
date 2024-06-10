@@ -10,6 +10,9 @@ public class Ropa {
     private int cantidad;
     private int precio;
 
+    public Ropa() {
+    }
+
     public Ropa(String nombre, String tipo, int cantidad, int precio) {
         this.nombre = nombre;
         this.tipo = tipo;
