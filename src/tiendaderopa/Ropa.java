@@ -48,5 +48,10 @@ public class Ropa {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
+
+    @Override
+    public String toString() {
+        return "Ropa " + "\nNombre: " + nombre + "\nTipo: " + tipo + "\nCantidad: " + cantidad + "\nPrecio: " + precio;
+    }
     
 }
