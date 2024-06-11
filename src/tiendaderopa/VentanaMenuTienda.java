@@ -63,6 +63,53 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         mostrarCarritoTxtArea = new javax.swing.JTextArea();
         atrasMstrrCrrtoBtn = new javax.swing.JButton();
         fondoMstrrCrrtoLabel = new javax.swing.JLabel();
+        pantalonesCtlgFrame = new javax.swing.JFrame();
+        jPanel3 = new javax.swing.JPanel();
+        pantalonesPanel = new javax.swing.JPanel();
+        pantalonesLabel = new javax.swing.JLabel();
+        atrasPntlnsBtn = new javax.swing.JButton();
+        pantalonJeanBtn = new javax.swing.JButton();
+        pantalonBusoBtn = new javax.swing.JButton();
+        pantalonJggrBtn = new javax.swing.JButton();
+        pantalonCargoBtn = new javax.swing.JButton();
+        fondoPntlnsLabel = new javax.swing.JLabel();
+        gorrasCtlgFrame = new javax.swing.JFrame();
+        jPanel4 = new javax.swing.JPanel();
+        gorrasPanel = new javax.swing.JPanel();
+        gorrasLabel = new javax.swing.JLabel();
+        atrasGorrasBtn = new javax.swing.JButton();
+        gorraBoinaBtn = new javax.swing.JButton();
+        gorraSnapBackBtn = new javax.swing.JButton();
+        gorraNrmlBtn = new javax.swing.JButton();
+        fondoGorrasLabel = new javax.swing.JLabel();
+        sueteresCtlgFrame = new javax.swing.JFrame();
+        jPanel5 = new javax.swing.JPanel();
+        gorrasPanel1 = new javax.swing.JPanel();
+        gorrasLabel1 = new javax.swing.JLabel();
+        atrasGorrasBtn1 = new javax.swing.JButton();
+        gorraBoinaBtn1 = new javax.swing.JButton();
+        gorraSnapBackBtn1 = new javax.swing.JButton();
+        gorraNrmlBtn1 = new javax.swing.JButton();
+        fondoGorrasLabel1 = new javax.swing.JLabel();
+        zapatosCtlgFrame = new javax.swing.JFrame();
+        jPanel6 = new javax.swing.JPanel();
+        pantalonesPanel1 = new javax.swing.JPanel();
+        pantalonesLabel1 = new javax.swing.JLabel();
+        atrasPntlnsBtn1 = new javax.swing.JButton();
+        pantalonJeanBtn1 = new javax.swing.JButton();
+        pantalonBusoBtn1 = new javax.swing.JButton();
+        pantalonJggrBtn1 = new javax.swing.JButton();
+        pantalonCargoBtn1 = new javax.swing.JButton();
+        fondoPntlnsLabel1 = new javax.swing.JLabel();
+        calzonetasCtlgFrame = new javax.swing.JFrame();
+        jPanel7 = new javax.swing.JPanel();
+        gorrasPanel2 = new javax.swing.JPanel();
+        gorrasLabel2 = new javax.swing.JLabel();
+        atrasGorrasBtn2 = new javax.swing.JButton();
+        gorraBoinaBtn2 = new javax.swing.JButton();
+        gorraSnapBackBtn2 = new javax.swing.JButton();
+        gorraNrmlBtn2 = new javax.swing.JButton();
+        fondoGorrasLabel2 = new javax.swing.JLabel();
         logoLabel = new javax.swing.JLabel();
         tituloLabel = new javax.swing.JLabel();
         catalogoBtn = new javax.swing.JButton();
@@ -117,6 +164,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                 pantalonesCtlgBtnMouseExited(evt);
             }
         });
+        pantalonesCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonesCtlgBtnActionPerformed(evt);
+            }
+        });
         catalogoFrame.getContentPane().add(pantalonesCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 180, 40));
 
         gorrasCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
@@ -130,6 +182,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 gorrasCtlgBtnMouseExited(evt);
+            }
+        });
+        gorrasCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorrasCtlgBtnActionPerformed(evt);
             }
         });
         catalogoFrame.getContentPane().add(gorrasCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 180, 40));
@@ -147,6 +204,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                 sueteresCtlgBtnMouseExited(evt);
             }
         });
+        sueteresCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sueteresCtlgBtnActionPerformed(evt);
+            }
+        });
         catalogoFrame.getContentPane().add(sueteresCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 190, 40));
 
         zapatosCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
@@ -162,6 +224,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                 zapatosCtlgBtnMouseExited(evt);
             }
         });
+        zapatosCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                zapatosCtlgBtnActionPerformed(evt);
+            }
+        });
         catalogoFrame.getContentPane().add(zapatosCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 190, 40));
 
         calzonetasCtlgBtn.setBackground(new java.awt.Color(51, 51, 51));
@@ -175,6 +242,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 calzonetasCtlgBtnMouseExited(evt);
+            }
+        });
+        calzonetasCtlgBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calzonetasCtlgBtnActionPerformed(evt);
             }
         });
         catalogoFrame.getContentPane().add(calzonetasCtlgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, 190, 40));
@@ -276,7 +348,6 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
         camisasCtlgFrame.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
-        mstrrCarritoFrame.setMaximumSize(new java.awt.Dimension(416, 498));
         mstrrCarritoFrame.setSize(new java.awt.Dimension(416, 498));
         mstrrCarritoFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -327,6 +398,551 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         mstrrCrrtoFondoPanel.add(fondoMstrrCrrtoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, -1));
 
         mstrrCarritoFrame.getContentPane().add(mstrrCrrtoFondoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 416, 498));
+
+        pantalonesCtlgFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pantalonesPanel.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonesPanel.setForeground(new java.awt.Color(204, 204, 204));
+        pantalonesPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pantalonesLabel.setBackground(new java.awt.Color(51, 51, 51));
+        pantalonesLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pantalonesLabel.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonesLabel.setText("Pantalones");
+        pantalonesPanel.add(pantalonesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+
+        jPanel3.add(pantalonesPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 130, 40));
+
+        atrasPntlnsBtn.setBackground(new java.awt.Color(204, 204, 204));
+        atrasPntlnsBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasPntlnsBtn.setForeground(new java.awt.Color(51, 51, 51));
+        atrasPntlnsBtn.setText("Atras");
+        atrasPntlnsBtn.setBorder(null);
+        atrasPntlnsBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasPntlnsBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasPntlnsBtnMouseExited(evt);
+            }
+        });
+        atrasPntlnsBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasPntlnsBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(atrasPntlnsBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 30));
+
+        pantalonJeanBtn.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonJeanBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonJeanBtn.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonJeanBtn.setText("Jean");
+        pantalonJeanBtn.setBorder(null);
+        pantalonJeanBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonJeanBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonJeanBtnMouseExited(evt);
+            }
+        });
+        pantalonJeanBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonJeanBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pantalonJeanBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 160, 30));
+
+        pantalonBusoBtn.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonBusoBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonBusoBtn.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonBusoBtn.setText("Buso");
+        pantalonBusoBtn.setBorder(null);
+        pantalonBusoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonBusoBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonBusoBtnMouseExited(evt);
+            }
+        });
+        pantalonBusoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonBusoBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pantalonBusoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 160, 30));
+
+        pantalonJggrBtn.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonJggrBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonJggrBtn.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonJggrBtn.setText("Jogger");
+        pantalonJggrBtn.setBorder(null);
+        pantalonJggrBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonJggrBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonJggrBtnMouseExited(evt);
+            }
+        });
+        pantalonJggrBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonJggrBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pantalonJggrBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 160, 30));
+
+        pantalonCargoBtn.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonCargoBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonCargoBtn.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonCargoBtn.setText("Cargo");
+        pantalonCargoBtn.setBorder(null);
+        pantalonCargoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonCargoBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonCargoBtnMouseExited(evt);
+            }
+        });
+        pantalonCargoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonCargoBtnActionPerformed(evt);
+            }
+        });
+        jPanel3.add(pantalonCargoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 160, 30));
+
+        fondoPntlnsLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        jPanel3.add(fondoPntlnsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        pantalonesCtlgFrame.getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
+
+        gorrasCtlgFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gorrasPanel.setBackground(new java.awt.Color(204, 204, 204));
+        gorrasPanel.setForeground(new java.awt.Color(204, 204, 204));
+        gorrasPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gorrasLabel.setBackground(new java.awt.Color(51, 51, 51));
+        gorrasLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        gorrasLabel.setForeground(new java.awt.Color(51, 51, 51));
+        gorrasLabel.setText("Gorras");
+        gorrasPanel.add(gorrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 20));
+
+        jPanel4.add(gorrasPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 120, 40));
+
+        atrasGorrasBtn.setBackground(new java.awt.Color(204, 204, 204));
+        atrasGorrasBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasGorrasBtn.setForeground(new java.awt.Color(51, 51, 51));
+        atrasGorrasBtn.setText("Atras");
+        atrasGorrasBtn.setBorder(null);
+        atrasGorrasBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasGorrasBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasGorrasBtnMouseExited(evt);
+            }
+        });
+        atrasGorrasBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasGorrasBtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(atrasGorrasBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 30));
+
+        gorraBoinaBtn.setBackground(new java.awt.Color(204, 204, 204));
+        gorraBoinaBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraBoinaBtn.setForeground(new java.awt.Color(51, 51, 51));
+        gorraBoinaBtn.setText("Boina");
+        gorraBoinaBtn.setBorder(null);
+        gorraBoinaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraBoinaBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraBoinaBtnMouseExited(evt);
+            }
+        });
+        gorraBoinaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraBoinaBtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(gorraBoinaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 160, 30));
+
+        gorraSnapBackBtn.setBackground(new java.awt.Color(204, 204, 204));
+        gorraSnapBackBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraSnapBackBtn.setForeground(new java.awt.Color(51, 51, 51));
+        gorraSnapBackBtn.setText("SnapBack");
+        gorraSnapBackBtn.setBorder(null);
+        gorraSnapBackBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraSnapBackBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraSnapBackBtnMouseExited(evt);
+            }
+        });
+        gorraSnapBackBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraSnapBackBtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(gorraSnapBackBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 160, 30));
+
+        gorraNrmlBtn.setBackground(new java.awt.Color(204, 204, 204));
+        gorraNrmlBtn.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraNrmlBtn.setForeground(new java.awt.Color(51, 51, 51));
+        gorraNrmlBtn.setText("Normal o Beisbolera");
+        gorraNrmlBtn.setBorder(null);
+        gorraNrmlBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraNrmlBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraNrmlBtnMouseExited(evt);
+            }
+        });
+        gorraNrmlBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraNrmlBtnActionPerformed(evt);
+            }
+        });
+        jPanel4.add(gorraNrmlBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 160, 30));
+
+        fondoGorrasLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        jPanel4.add(fondoGorrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        gorrasCtlgFrame.getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
+
+        sueteresCtlgFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gorrasPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        gorrasPanel1.setForeground(new java.awt.Color(204, 204, 204));
+        gorrasPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gorrasLabel1.setBackground(new java.awt.Color(51, 51, 51));
+        gorrasLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        gorrasLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        gorrasLabel1.setText("Gorras");
+        gorrasPanel1.add(gorrasLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 20));
+
+        jPanel5.add(gorrasPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 120, 40));
+
+        atrasGorrasBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        atrasGorrasBtn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasGorrasBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        atrasGorrasBtn1.setText("Atras");
+        atrasGorrasBtn1.setBorder(null);
+        atrasGorrasBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasGorrasBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasGorrasBtn1MouseExited(evt);
+            }
+        });
+        atrasGorrasBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasGorrasBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(atrasGorrasBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 30));
+
+        gorraBoinaBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        gorraBoinaBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraBoinaBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        gorraBoinaBtn1.setText("Boina");
+        gorraBoinaBtn1.setBorder(null);
+        gorraBoinaBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraBoinaBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraBoinaBtn1MouseExited(evt);
+            }
+        });
+        gorraBoinaBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraBoinaBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(gorraBoinaBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 160, 30));
+
+        gorraSnapBackBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        gorraSnapBackBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraSnapBackBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        gorraSnapBackBtn1.setText("SnapBack");
+        gorraSnapBackBtn1.setBorder(null);
+        gorraSnapBackBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraSnapBackBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraSnapBackBtn1MouseExited(evt);
+            }
+        });
+        gorraSnapBackBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraSnapBackBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(gorraSnapBackBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 160, 30));
+
+        gorraNrmlBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        gorraNrmlBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraNrmlBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        gorraNrmlBtn1.setText("Normal o Beisbolera");
+        gorraNrmlBtn1.setBorder(null);
+        gorraNrmlBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraNrmlBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraNrmlBtn1MouseExited(evt);
+            }
+        });
+        gorraNrmlBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraNrmlBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(gorraNrmlBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 160, 30));
+
+        fondoGorrasLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        jPanel5.add(fondoGorrasLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        sueteresCtlgFrame.getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
+
+        zapatosCtlgFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pantalonesPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonesPanel1.setForeground(new java.awt.Color(204, 204, 204));
+        pantalonesPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pantalonesLabel1.setBackground(new java.awt.Color(51, 51, 51));
+        pantalonesLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        pantalonesLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonesLabel1.setText("Pantalones");
+        pantalonesPanel1.add(pantalonesLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 20));
+
+        jPanel6.add(pantalonesPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 130, 40));
+
+        atrasPntlnsBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        atrasPntlnsBtn1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasPntlnsBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        atrasPntlnsBtn1.setText("Atras");
+        atrasPntlnsBtn1.setBorder(null);
+        atrasPntlnsBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasPntlnsBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasPntlnsBtn1MouseExited(evt);
+            }
+        });
+        atrasPntlnsBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasPntlnsBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(atrasPntlnsBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 30));
+
+        pantalonJeanBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonJeanBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonJeanBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonJeanBtn1.setText("Jean");
+        pantalonJeanBtn1.setBorder(null);
+        pantalonJeanBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonJeanBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonJeanBtn1MouseExited(evt);
+            }
+        });
+        pantalonJeanBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonJeanBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(pantalonJeanBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 160, 30));
+
+        pantalonBusoBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonBusoBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonBusoBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonBusoBtn1.setText("Buso");
+        pantalonBusoBtn1.setBorder(null);
+        pantalonBusoBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonBusoBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonBusoBtn1MouseExited(evt);
+            }
+        });
+        pantalonBusoBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonBusoBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(pantalonBusoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 160, 30));
+
+        pantalonJggrBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonJggrBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonJggrBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonJggrBtn1.setText("Jogger");
+        pantalonJggrBtn1.setBorder(null);
+        pantalonJggrBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonJggrBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonJggrBtn1MouseExited(evt);
+            }
+        });
+        pantalonJggrBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonJggrBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(pantalonJggrBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 160, 30));
+
+        pantalonCargoBtn1.setBackground(new java.awt.Color(204, 204, 204));
+        pantalonCargoBtn1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        pantalonCargoBtn1.setForeground(new java.awt.Color(51, 51, 51));
+        pantalonCargoBtn1.setText("Cargo");
+        pantalonCargoBtn1.setBorder(null);
+        pantalonCargoBtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                pantalonCargoBtn1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pantalonCargoBtn1MouseExited(evt);
+            }
+        });
+        pantalonCargoBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pantalonCargoBtn1ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(pantalonCargoBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 160, 30));
+
+        fondoPntlnsLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        jPanel6.add(fondoPntlnsLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        zapatosCtlgFrame.getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
+
+        calzonetasCtlgFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gorrasPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        gorrasPanel2.setForeground(new java.awt.Color(204, 204, 204));
+        gorrasPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gorrasLabel2.setBackground(new java.awt.Color(51, 51, 51));
+        gorrasLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        gorrasLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        gorrasLabel2.setText("Gorras");
+        gorrasPanel2.add(gorrasLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 20));
+
+        jPanel7.add(gorrasPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 120, 40));
+
+        atrasGorrasBtn2.setBackground(new java.awt.Color(204, 204, 204));
+        atrasGorrasBtn2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasGorrasBtn2.setForeground(new java.awt.Color(51, 51, 51));
+        atrasGorrasBtn2.setText("Atras");
+        atrasGorrasBtn2.setBorder(null);
+        atrasGorrasBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasGorrasBtn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasGorrasBtn2MouseExited(evt);
+            }
+        });
+        atrasGorrasBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasGorrasBtn2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(atrasGorrasBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 70, 30));
+
+        gorraBoinaBtn2.setBackground(new java.awt.Color(204, 204, 204));
+        gorraBoinaBtn2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraBoinaBtn2.setForeground(new java.awt.Color(51, 51, 51));
+        gorraBoinaBtn2.setText("Boina");
+        gorraBoinaBtn2.setBorder(null);
+        gorraBoinaBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraBoinaBtn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraBoinaBtn2MouseExited(evt);
+            }
+        });
+        gorraBoinaBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraBoinaBtn2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(gorraBoinaBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 160, 30));
+
+        gorraSnapBackBtn2.setBackground(new java.awt.Color(204, 204, 204));
+        gorraSnapBackBtn2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraSnapBackBtn2.setForeground(new java.awt.Color(51, 51, 51));
+        gorraSnapBackBtn2.setText("SnapBack");
+        gorraSnapBackBtn2.setBorder(null);
+        gorraSnapBackBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraSnapBackBtn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraSnapBackBtn2MouseExited(evt);
+            }
+        });
+        gorraSnapBackBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraSnapBackBtn2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(gorraSnapBackBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, 160, 30));
+
+        gorraNrmlBtn2.setBackground(new java.awt.Color(204, 204, 204));
+        gorraNrmlBtn2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        gorraNrmlBtn2.setForeground(new java.awt.Color(51, 51, 51));
+        gorraNrmlBtn2.setText("Normal o Beisbolera");
+        gorraNrmlBtn2.setBorder(null);
+        gorraNrmlBtn2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                gorraNrmlBtn2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                gorraNrmlBtn2MouseExited(evt);
+            }
+        });
+        gorraNrmlBtn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gorraNrmlBtn2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(gorraNrmlBtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 160, 30));
+
+        fondoGorrasLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        jPanel7.add(fondoGorrasLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        calzonetasCtlgFrame.getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -443,6 +1059,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // ------------------------------------------------------ Todas las funcionalidades del frame PRINCIPAL ------------------------------------------------------------------ //
     private void catalogoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_catalogoBtnMouseEntered
         catalogoBtn.setBackground(Color.BLACK);
     }//GEN-LAST:event_catalogoBtnMouseEntered
@@ -487,7 +1104,10 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         System.out.println("Gracias por visitarnos :D");
         System.exit(0); // esta instruccion sale del todo el programa cuando se presiona el boton salir en el menu de la tienda.
     }//GEN-LAST:event_salirBtnActionPerformed
-
+    // --------------------------------------------------- Termina las funcionalidades del frame PRINCIPAL ---------------------------------------------------------------- //
+    
+    
+    // ------------------------------------------------------- Todas las funcionalidades del frame CATALOGO ---------------------------------------------------------- //
     private void catalogoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoBtnActionPerformed
         setVisible(false);
         catalogoFrame.pack();
@@ -555,7 +1175,10 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         catalogoFrame.setVisible(false);
         setVisible(true);
     }//GEN-LAST:event_atrasCtlgBtnActionPerformed
-
+    // -------------------------------------------- Termina las funcionalidades de todo el frame CATALOGO ------------------------------------------------------ //
+    
+    
+    // --------------------------------------------------- Inicio de una parte de las funcionalidades del frame CAMISAS -------------------------------------------------------------- //
     private void atrasCmsasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasCmsasBtnMouseEntered
         atrasCmsasBtn.setBackground(Color.decode("#C85D5D"));
     }//GEN-LAST:event_atrasCmsasBtnMouseEntered
@@ -584,7 +1207,10 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
             System.out.println((i + 1) + "\n" + camisas.get(i));
         }*/
     }//GEN-LAST:event_camisaMngCrtaBtnActionPerformed
-
+    // ---------------------------------------------------------------------- Termina una parte de todo el frame de CAMISAS ---------------------------------------------------------------------------------- //
+    
+    
+    // ------------------------------------------------------------ Las funcionalidades de todo el frame MOSTRAR CATALOGO ------------------------------------------------------------------------------- //
     private void mostrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarBtnActionPerformed
         setVisible(false);
         mstrrCarritoFrame.pack();
@@ -679,7 +1305,315 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         mstrrCarritoFrame.setVisible(false);
         setVisible(true);
     }//GEN-LAST:event_atrasMstrrCrrtoBtnActionPerformed
+    // ------------------------------------------------------------------- Termina todo lo del frame MOSTRAR CARRITO ------------------------------------------------------------------------------- //
+    
+    
+    // ----------------------------------------- Funcionalidades de todo el frame de PANTALONES ------------------------------------------------- //
+    private void atrasPntlnsBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasPntlnsBtnMouseEntered
+        atrasPntlnsBtn.setBackground(Color.decode("#C85D5D"));
+    }//GEN-LAST:event_atrasPntlnsBtnMouseEntered
 
+    private void atrasPntlnsBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasPntlnsBtnMouseExited
+        atrasPntlnsBtn.setBackground(Color.decode("#CCCCCC"));
+    }//GEN-LAST:event_atrasPntlnsBtnMouseExited
+
+    private void atrasPntlnsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasPntlnsBtnActionPerformed
+        pantalonesCtlgFrame.setVisible(false);
+        catalogoFrame.setVisible(true);
+    }//GEN-LAST:event_atrasPntlnsBtnActionPerformed
+
+    private void pantalonJeanBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonJeanBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJeanBtnActionPerformed
+
+    private void pantalonesCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonesCtlgBtnActionPerformed
+        catalogoFrame.setVisible(false);
+        pantalonesCtlgFrame.pack();
+        pantalonesCtlgFrame.setVisible(true);
+        pantalonesCtlgFrame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_pantalonesCtlgBtnActionPerformed
+
+    private void pantalonJeanBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJeanBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJeanBtnMouseEntered
+
+    private void pantalonJeanBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJeanBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJeanBtnMouseExited
+
+    private void pantalonBusoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonBusoBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonBusoBtnMouseEntered
+
+    private void pantalonBusoBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonBusoBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonBusoBtnMouseExited
+
+    private void pantalonBusoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonBusoBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonBusoBtnActionPerformed
+
+    private void pantalonJggrBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJggrBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJggrBtnMouseEntered
+
+    private void pantalonJggrBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJggrBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJggrBtnMouseExited
+
+    private void pantalonJggrBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonJggrBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJggrBtnActionPerformed
+
+    private void pantalonCargoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonCargoBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonCargoBtnMouseEntered
+
+    private void pantalonCargoBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonCargoBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonCargoBtnMouseExited
+
+    private void pantalonCargoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonCargoBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonCargoBtnActionPerformed
+     // --------------------------------------------------- Termina todo lo del frame de PANTALONES ----------------------------------------------------------- //
+    
+    //
+    private void atrasGorrasBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasGorrasBtnMouseEntered
+        atrasGorrasBtn.setBackground(Color.decode("#C85D5D"));
+    }//GEN-LAST:event_atrasGorrasBtnMouseEntered
+
+    private void atrasGorrasBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasGorrasBtnMouseExited
+        atrasGorrasBtn.setBackground(Color.decode("#CCCCCC"));
+    }//GEN-LAST:event_atrasGorrasBtnMouseExited
+
+    private void atrasGorrasBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasGorrasBtnActionPerformed
+        gorrasCtlgFrame.setVisible(false);
+        catalogoFrame.setVisible(true);
+    }//GEN-LAST:event_atrasGorrasBtnActionPerformed
+
+    private void gorraBoinaBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraBoinaBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtnMouseEntered
+
+    private void gorraBoinaBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraBoinaBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtnMouseExited
+
+    private void gorraBoinaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraBoinaBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtnActionPerformed
+
+    private void gorraSnapBackBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraSnapBackBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtnMouseEntered
+
+    private void gorraSnapBackBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraSnapBackBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtnMouseExited
+
+    private void gorraSnapBackBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraSnapBackBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtnActionPerformed
+
+    private void gorraNrmlBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraNrmlBtnMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtnMouseEntered
+
+    private void gorraNrmlBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraNrmlBtnMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtnMouseExited
+
+    private void gorraNrmlBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraNrmlBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtnActionPerformed
+
+    private void gorrasCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorrasCtlgBtnActionPerformed
+        catalogoFrame.setVisible(false);
+        gorrasCtlgFrame.pack();
+        gorrasCtlgFrame.setVisible(true);
+        gorrasCtlgFrame.setLocationRelativeTo(null);
+    }//GEN-LAST:event_gorrasCtlgBtnActionPerformed
+    // --------------------------------------------------- Termina todo lo del frame de GORRAS ----------------------------------------------------------- //
+
+    
+     // --------------------------------------------------- Funcionalidades de todo el frame de SUETERES ----------------------------------------------------------- //
+    private void sueteresCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sueteresCtlgBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sueteresCtlgBtnActionPerformed
+
+    private void atrasGorrasBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasGorrasBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasGorrasBtn1MouseEntered
+
+    private void atrasGorrasBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasGorrasBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasGorrasBtn1MouseExited
+
+    private void atrasGorrasBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasGorrasBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasGorrasBtn1ActionPerformed
+
+    private void gorraBoinaBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraBoinaBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtn1MouseEntered
+
+    private void gorraBoinaBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraBoinaBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtn1MouseExited
+
+    private void gorraBoinaBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraBoinaBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtn1ActionPerformed
+
+    private void gorraSnapBackBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraSnapBackBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtn1MouseEntered
+
+    private void gorraSnapBackBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraSnapBackBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtn1MouseExited
+
+    private void gorraSnapBackBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraSnapBackBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtn1ActionPerformed
+
+    private void gorraNrmlBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraNrmlBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtn1MouseEntered
+
+    private void gorraNrmlBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraNrmlBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtn1MouseExited
+
+    private void gorraNrmlBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraNrmlBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtn1ActionPerformed
+    // ------------------------------------------------- Termina todo lo del frame SUETERES--------------------------------------------------------- //
+
+    
+    // --------------------------------------------- Funcionalidades de todo lo del frame de ZAPATOS --------------------------------------------------------- //
+    private void zapatosCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zapatosCtlgBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_zapatosCtlgBtnActionPerformed
+
+    private void atrasPntlnsBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasPntlnsBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasPntlnsBtn1MouseEntered
+
+    private void atrasPntlnsBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasPntlnsBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasPntlnsBtn1MouseExited
+
+    private void atrasPntlnsBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasPntlnsBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasPntlnsBtn1ActionPerformed
+
+    private void pantalonJeanBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJeanBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJeanBtn1MouseEntered
+
+    private void pantalonJeanBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJeanBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJeanBtn1MouseExited
+
+    private void pantalonJeanBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonJeanBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJeanBtn1ActionPerformed
+
+    private void pantalonBusoBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonBusoBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonBusoBtn1MouseEntered
+
+    private void pantalonBusoBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonBusoBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonBusoBtn1MouseExited
+
+    private void pantalonBusoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonBusoBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonBusoBtn1ActionPerformed
+
+    private void pantalonJggrBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJggrBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJggrBtn1MouseEntered
+
+    private void pantalonJggrBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonJggrBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJggrBtn1MouseExited
+
+    private void pantalonJggrBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonJggrBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonJggrBtn1ActionPerformed
+
+    private void pantalonCargoBtn1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonCargoBtn1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonCargoBtn1MouseEntered
+
+    private void pantalonCargoBtn1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pantalonCargoBtn1MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonCargoBtn1MouseExited
+
+    private void pantalonCargoBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonCargoBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pantalonCargoBtn1ActionPerformed
+    // -------------------------------------------- Termina todo lo del frame ZAPATOS ---------------------------------------------------- //
+
+    
+    // ---------------------------------------------- Funcionalidades de todo lo del frame CALZONETAS ---------------------------------------------- //
+    private void calzonetasCtlgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calzonetasCtlgBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_calzonetasCtlgBtnActionPerformed
+
+    private void atrasGorrasBtn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasGorrasBtn2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasGorrasBtn2MouseEntered
+
+    private void atrasGorrasBtn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasGorrasBtn2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasGorrasBtn2MouseExited
+
+    private void atrasGorrasBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasGorrasBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasGorrasBtn2ActionPerformed
+
+    private void gorraBoinaBtn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraBoinaBtn2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtn2MouseEntered
+
+    private void gorraBoinaBtn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraBoinaBtn2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtn2MouseExited
+
+    private void gorraBoinaBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraBoinaBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraBoinaBtn2ActionPerformed
+
+    private void gorraSnapBackBtn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraSnapBackBtn2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtn2MouseEntered
+
+    private void gorraSnapBackBtn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraSnapBackBtn2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtn2MouseExited
+
+    private void gorraSnapBackBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraSnapBackBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraSnapBackBtn2ActionPerformed
+
+    private void gorraNrmlBtn2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraNrmlBtn2MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtn2MouseEntered
+
+    private void gorraNrmlBtn2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gorraNrmlBtn2MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtn2MouseExited
+
+    private void gorraNrmlBtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraNrmlBtn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_gorraNrmlBtn2ActionPerformed
+    // --------------------------------------------- Termina todo lo del frame CALZONETAS --------------------------------------------------- //
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -718,8 +1652,14 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atrasCmsasBtn;
     private javax.swing.JButton atrasCtlgBtn;
+    private javax.swing.JButton atrasGorrasBtn;
+    private javax.swing.JButton atrasGorrasBtn1;
+    private javax.swing.JButton atrasGorrasBtn2;
     private javax.swing.JButton atrasMstrrCrrtoBtn;
+    private javax.swing.JButton atrasPntlnsBtn;
+    private javax.swing.JButton atrasPntlnsBtn1;
     private javax.swing.JButton calzonetasCtlgBtn;
+    private javax.swing.JFrame calzonetasCtlgFrame;
     private javax.swing.JButton camisaMngCrtaBtn;
     private javax.swing.JButton camisaMngLrgBtn;
     private javax.swing.JButton camisasCtlgBtn;
@@ -736,11 +1676,37 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JButton eliminarBtn;
     private javax.swing.JLabel fondoCmsasLabel;
     private javax.swing.JLabel fondoCtlgLabel;
+    private javax.swing.JLabel fondoGorrasLabel;
+    private javax.swing.JLabel fondoGorrasLabel1;
+    private javax.swing.JLabel fondoGorrasLabel2;
     private javax.swing.JLabel fondoLabel;
     private javax.swing.JLabel fondoMstrrCrrtoLabel;
+    private javax.swing.JLabel fondoPntlnsLabel;
+    private javax.swing.JLabel fondoPntlnsLabel1;
+    private javax.swing.JButton gorraBoinaBtn;
+    private javax.swing.JButton gorraBoinaBtn1;
+    private javax.swing.JButton gorraBoinaBtn2;
+    private javax.swing.JButton gorraNrmlBtn;
+    private javax.swing.JButton gorraNrmlBtn1;
+    private javax.swing.JButton gorraNrmlBtn2;
+    private javax.swing.JButton gorraSnapBackBtn;
+    private javax.swing.JButton gorraSnapBackBtn1;
+    private javax.swing.JButton gorraSnapBackBtn2;
     private javax.swing.JButton gorrasCtlgBtn;
+    private javax.swing.JFrame gorrasCtlgFrame;
+    private javax.swing.JLabel gorrasLabel;
+    private javax.swing.JLabel gorrasLabel1;
+    private javax.swing.JLabel gorrasLabel2;
+    private javax.swing.JPanel gorrasPanel;
+    private javax.swing.JPanel gorrasPanel1;
+    private javax.swing.JPanel gorrasPanel2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JLabel menuTituloLabel;
@@ -749,10 +1715,25 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JFrame mstrrCarritoFrame;
     private javax.swing.JPanel mstrrCrrtoFondoPanel;
     private javax.swing.JPanel mstrrCrrtoPanel;
+    private javax.swing.JButton pantalonBusoBtn;
+    private javax.swing.JButton pantalonBusoBtn1;
+    private javax.swing.JButton pantalonCargoBtn;
+    private javax.swing.JButton pantalonCargoBtn1;
+    private javax.swing.JButton pantalonJeanBtn;
+    private javax.swing.JButton pantalonJeanBtn1;
+    private javax.swing.JButton pantalonJggrBtn;
+    private javax.swing.JButton pantalonJggrBtn1;
     private javax.swing.JButton pantalonesCtlgBtn;
+    private javax.swing.JFrame pantalonesCtlgFrame;
+    private javax.swing.JLabel pantalonesLabel;
+    private javax.swing.JLabel pantalonesLabel1;
+    private javax.swing.JPanel pantalonesPanel;
+    private javax.swing.JPanel pantalonesPanel1;
     private javax.swing.JButton salirBtn;
     private javax.swing.JButton sueteresCtlgBtn;
+    private javax.swing.JFrame sueteresCtlgFrame;
     private javax.swing.JLabel tituloLabel;
     private javax.swing.JButton zapatosCtlgBtn;
+    private javax.swing.JFrame zapatosCtlgFrame;
     // End of variables declaration//GEN-END:variables
 }
