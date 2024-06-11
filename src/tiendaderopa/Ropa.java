@@ -54,7 +54,7 @@ public class Ropa {
 
     @Override
     public String toString() {
-        return "Ropa " + "\nNombre: " + nombre + "\nTipo: " + tipo + "\nCantidad: " + cantidad + "\nPrecio: " + precio;
+        return "\nNombre: " + nombre + "\nTipo: " + tipo + "\nCantidad: " + cantidad + "\nPrecio: " + precio;
     }
     
 }

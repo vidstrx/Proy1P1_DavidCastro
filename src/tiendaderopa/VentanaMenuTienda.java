@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package tiendaderopa;
 
 import java.awt.Color;
@@ -58,6 +55,14 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         camisetaMngCrtaBtn = new javax.swing.JButton();
         camisetaMngLrgBtn = new javax.swing.JButton();
         fondoCmsasLabel = new javax.swing.JLabel();
+        mstrrCarritoFrame = new javax.swing.JFrame();
+        mstrrCrrtoFondoPanel = new javax.swing.JPanel();
+        mstrrCrrtoPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        mostrarCarritoTxtArea = new javax.swing.JTextArea();
+        atrasMstrrCrrtoBtn = new javax.swing.JButton();
+        fondoMstrrCrrtoLabel = new javax.swing.JLabel();
         logoLabel = new javax.swing.JLabel();
         tituloLabel = new javax.swing.JLabel();
         catalogoBtn = new javax.swing.JButton();
@@ -271,6 +276,58 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
         camisasCtlgFrame.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
+        mstrrCarritoFrame.setMaximumSize(new java.awt.Dimension(416, 498));
+        mstrrCarritoFrame.setSize(new java.awt.Dimension(416, 498));
+        mstrrCarritoFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        mstrrCrrtoFondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        mstrrCrrtoPanel.setBackground(new java.awt.Color(51, 51, 51));
+        mstrrCrrtoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel1.setText("Mostrar carrito");
+        mstrrCrrtoPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        mstrrCrrtoFondoPanel.add(mstrrCrrtoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 190, 50));
+
+        mostrarCarritoTxtArea.setBackground(new java.awt.Color(153, 153, 153));
+        mostrarCarritoTxtArea.setColumns(20);
+        mostrarCarritoTxtArea.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        mostrarCarritoTxtArea.setForeground(new java.awt.Color(51, 51, 51));
+        mostrarCarritoTxtArea.setRows(5);
+        jScrollPane1.setViewportView(mostrarCarritoTxtArea);
+
+        mstrrCrrtoFondoPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 350, 350));
+
+        atrasMstrrCrrtoBtn.setBackground(new java.awt.Color(51, 51, 51));
+        atrasMstrrCrrtoBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasMstrrCrrtoBtn.setForeground(new java.awt.Color(204, 204, 204));
+        atrasMstrrCrrtoBtn.setText("Atras");
+        atrasMstrrCrrtoBtn.setBorder(null);
+        atrasMstrrCrrtoBtn.setBorderPainted(false);
+        atrasMstrrCrrtoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasMstrrCrrtoBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasMstrrCrrtoBtnMouseExited(evt);
+            }
+        });
+        atrasMstrrCrrtoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasMstrrCrrtoBtnActionPerformed(evt);
+            }
+        });
+        mstrrCrrtoFondoPanel.add(atrasMstrrCrrtoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 70, 30));
+
+        fondoMstrrCrrtoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        fondoMstrrCrrtoLabel.setText("jLabel1");
+        mstrrCrrtoFondoPanel.add(fondoMstrrCrrtoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, -1));
+
+        mstrrCarritoFrame.getContentPane().add(mstrrCrrtoFondoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 416, 498));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -320,6 +377,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 mostrarBtnMouseExited(evt);
+            }
+        });
+        mostrarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mostrarBtnActionPerformed(evt);
             }
         });
         getContentPane().add(mostrarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 360, 40));
@@ -523,6 +585,101 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         }*/
     }//GEN-LAST:event_camisaMngCrtaBtnActionPerformed
 
+    private void mostrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarBtnActionPerformed
+        setVisible(false);
+        mstrrCarritoFrame.pack();
+        mstrrCarritoFrame.setVisible(true);
+        mstrrCarritoFrame.setLocationRelativeTo(null);
+        mostrarCarritoTxtArea.setText("");
+        // todo esto mostrara lo que tienes dentro de tu carrito, validado todo
+        int opcion = 0;
+        do {
+            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que cosas del tu carrito deseas ver\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
+            if (opcion < 0 || opcion > 7){
+                JOptionPane.showMessageDialog(null, "No ingresaste un valor valido, Intenta de nuevo");
+            } else {
+                if (opcion == 0 && camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && zapatos.isEmpty() && calzonetas.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No haz agregado nada al carrito");
+                } else if (opcion == 0){
+                    for (int i = 0; i < camisas.size(); i++) {
+                        mostrarCarritoTxtArea.append("\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
+                    } 
+                    for (int i = 0; i < pantalones.size(); i++) {
+                        mostrarCarritoTxtArea.append("\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                    }
+                    for (int i = 0; i < gorras.size(); i++) {
+                        mostrarCarritoTxtArea.append("\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
+                    }
+                    for (int i = 0; i < sueteres.size(); i++) {
+                        mostrarCarritoTxtArea.append("\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
+                    }
+                    for (int i = 0; i < calzonetas.size(); i++) {
+                        mostrarCarritoTxtArea.append("\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
+                    }
+                    break;
+                }else if (opcion == 1 && camisas.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en camisas");
+                } else if (opcion == 2 && pantalones.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en pantalones");
+                } else if (opcion == 3 && gorras.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en gorras");
+                } else if (opcion == 4 && sueteres.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en sueteres");
+                } else if (opcion == 5 && zapatos.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en zapatos");
+                } else if (opcion == 6 && calzonetas.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en calzonetas");
+                } else {
+                    switch (opcion){
+                        case 1:
+                            for (int i = 0; i < camisas.size(); i++) {
+                                mostrarCarritoTxtArea.append("\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
+                            } 
+                            break;
+                        case 2:
+                            for (int i = 0; i < pantalones.size(); i++) {
+                                mostrarCarritoTxtArea.append("\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                            }
+                            break;
+                        case 3:
+                            for (int i = 0; i < gorras.size(); i++) {
+                                mostrarCarritoTxtArea.append("\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
+                            }
+                            break;
+                        case 4:
+                            for (int i = 0; i < sueteres.size(); i++) {
+                                mostrarCarritoTxtArea.append("\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
+                            }
+                            break;
+                        case 5:
+                            for (int i = 0; i < zapatos.size(); i++) {
+                                mostrarCarritoTxtArea.append("\n-------Zapato " + (i+1) +"---------" + zapatos.get(i));
+                            }
+                            break;
+                        case 6:
+                            for (int i = 0; i < calzonetas.size(); i++) {
+                                mostrarCarritoTxtArea.append("\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
+                            }
+                            break;
+                    }
+                }
+            }
+        } while (opcion != 7);
+    }//GEN-LAST:event_mostrarBtnActionPerformed
+
+    private void atrasMstrrCrrtoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasMstrrCrrtoBtnMouseEntered
+        atrasMstrrCrrtoBtn.setBackground(Color.decode("#480000"));
+    }//GEN-LAST:event_atrasMstrrCrrtoBtnMouseEntered
+
+    private void atrasMstrrCrrtoBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasMstrrCrrtoBtnMouseExited
+        atrasMstrrCrrtoBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_atrasMstrrCrrtoBtnMouseExited
+
+    private void atrasMstrrCrrtoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasMstrrCrrtoBtnActionPerformed
+        mstrrCarritoFrame.setVisible(false);
+        setVisible(true);
+    }//GEN-LAST:event_atrasMstrrCrrtoBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -561,6 +718,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atrasCmsasBtn;
     private javax.swing.JButton atrasCtlgBtn;
+    private javax.swing.JButton atrasMstrrCrrtoBtn;
     private javax.swing.JButton calzonetasCtlgBtn;
     private javax.swing.JButton camisaMngCrtaBtn;
     private javax.swing.JButton camisaMngLrgBtn;
@@ -579,11 +737,18 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JLabel fondoCmsasLabel;
     private javax.swing.JLabel fondoCtlgLabel;
     private javax.swing.JLabel fondoLabel;
+    private javax.swing.JLabel fondoMstrrCrrtoLabel;
     private javax.swing.JButton gorrasCtlgBtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JLabel menuTituloLabel;
     private javax.swing.JButton mostrarBtn;
+    private javax.swing.JTextArea mostrarCarritoTxtArea;
+    private javax.swing.JFrame mstrrCarritoFrame;
+    private javax.swing.JPanel mstrrCrrtoFondoPanel;
+    private javax.swing.JPanel mstrrCrrtoPanel;
     private javax.swing.JButton pantalonesCtlgBtn;
     private javax.swing.JButton salirBtn;
     private javax.swing.JButton sueteresCtlgBtn;
