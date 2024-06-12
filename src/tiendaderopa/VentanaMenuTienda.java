@@ -17,7 +17,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     public static ArrayList <Ropa> sueteres = new ArrayList();
     public static ArrayList <Ropa> zapatos = new ArrayList();
     public static ArrayList <Ropa> calzonetas = new ArrayList();
-    
+
     /**
      * Creates new form VentanaMenuTienda
      */
@@ -1202,10 +1202,9 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private void camisaMngCrtaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camisaMngCrtaBtnActionPerformed
         // Talvez hacer un do while hasta que la cantidad total sea 0, usar joption para conseguir el numero que ingreso e ir restando.
         int precio = 600; int cantidadTotal = 10; String nombre = "Camisa"; String tipo = "Camisa manga corta";
-        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,precio));
-        /*for (int i = 0; i < camisas.size(); i++) {
-            System.out.println((i + 1) + "\n" + camisas.get(i));
-        }*/
+        
+        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
+        
     }//GEN-LAST:event_camisaMngCrtaBtnActionPerformed
     // ---------------------------------------------------------------------- Termina una parte de todo el frame de CAMISAS ---------------------------------------------------------------------------------- //
     
@@ -1286,6 +1285,10 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                             for (int i = 0; i < calzonetas.size(); i++) {
                                 mostrarCarritoTxtArea.append("\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
                             }
+                            break;
+                        case 7:
+                            mstrrCarritoFrame.setVisible(false);
+                            setVisible(true);
                             break;
                     }
                 }

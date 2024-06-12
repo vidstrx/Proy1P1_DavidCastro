@@ -4,19 +4,23 @@
  */
 package tiendaderopa;
 
+import javax.swing.JOptionPane;
+
 public class Ropa {
     private String nombre;
     private String tipo;
     private int cantidad;
+    private String color;
     private int precio;
 
     public Ropa() {
     }
 
-    public Ropa(String nombre, String tipo, int cantidad, int precio) {
+    public Ropa(String nombre, String tipo, int cantidad, String color, int precio) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.cantidad = cantidad;
+        this.color = color;
         this.precio = precio;
     }
 
@@ -52,9 +56,65 @@ public class Ropa {
         this.precio = precio;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
     public String toString() {
-        return "\nNombre: " + nombre + "\nTipo: " + tipo + "\nCantidad: " + cantidad + "\nPrecio: " + precio;
+        return "\nNombre: " + nombre + "\nTipo: " + tipo + "\nCantidad: " + cantidad + "\nColor: " + color +"\nPrecio: " + precio;
     }
     
+    public String mostrarColores(){
+        String matrizColores [][] = {
+            {"1. Negro","2. Amarillo","3. Azul"},
+            {"4. Blanco","5. Rojo","6. Gris"}
+        };
+        String colores = "";
+        for (int i = 0; i < matrizColores.length; i++) {
+            for (int j = 0; j < matrizColores[i].length; j++) {
+                colores += "[" + matrizColores[i][j] + "] ";
+            }
+            colores += "\n";
+        }
+        return colores;
+    }
+    public String escogerColor(int posicion){
+        String colores [][] = {
+            {"1. Negro","2. Amarillo","3. Azul"},
+            {"4. Blanco","5. Rojo","6. Gris"}
+        };
+        String color = "";
+         switch (posicion) {
+            case 1:
+                color = colores[0][0];
+                System.out.println(color);
+                break;
+            case 2:
+                color = colores[0][1];
+                System.out.println(color);
+                break;
+            case 3:
+                color = colores[0][2];
+                System.out.println(color);
+                break;
+            case 4:
+                color = colores[1][0];
+                System.out.println(color);
+                break;
+            case 5:
+                color = colores[1][1];
+                System.out.println(color);
+                break;
+            case 6:
+                color = colores[1][2];
+                System.out.println(color);
+                break;
+        }
+         return color;
+    }
 }
