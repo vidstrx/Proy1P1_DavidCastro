@@ -1205,90 +1205,100 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     
     // ------------------------------------------------------------ Las funcionalidades de todo el frame MOSTRAR CATALOGO ------------------------------------------------------------------------------- //
     private void mostrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarBtnActionPerformed
-        setVisible(false);
-        mstrrCarritoFrame.pack();
-        mstrrCarritoFrame.setVisible(true);
-        mstrrCarritoFrame.setLocationRelativeTo(null);
-        mostrarCarritoTxtArea.setText("");
-        // todo esto mostrara lo que tienes dentro de tu carrito, validado todo
-        int opcion = 0;
-        do {
-            opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que cosas del tu carrito deseas ver\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
-            if (opcion < 0 || opcion > 7){
-                JOptionPane.showMessageDialog(null, "No ingresaste un valor valido, Intenta de nuevo");
-            } else {
-                if (opcion == 0 && camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && calzados.isEmpty() && calzonetas.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No haz agregado nada al carrito");
-                } else if (opcion == 0){
-                    mostrarCarritoTxtArea.setText("");
-                    for (int i = 0; i < camisas.size(); i++) {
-                        mostrarCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
-                    } 
-                    for (int i = 0; i < pantalones.size(); i++) {
-                        mostrarCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
-                    }
-                    for (int i = 0; i < gorras.size(); i++) {
-                        mostrarCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
-                    }
-                    for (int i = 0; i < sueteres.size(); i++) {
-                        mostrarCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
-                    }
-                    for (int i = 0; i < calzonetas.size(); i++) {
-                        mostrarCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
-                    }
-                    break;
-                }else if (opcion == 1 && camisas.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en camisas");
-                } else if (opcion == 2 && pantalones.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en pantalones");
-                } else if (opcion == 3 && gorras.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en gorras");
-                } else if (opcion == 4 && sueteres.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en sueteres");
-                } else if (opcion == 5 && calzados.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en zapatos");
-                } else if (opcion == 6 && calzonetas.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en calzonetas");
+        if (camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && calzados.isEmpty() && calzonetas.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada en tu carrito");
+        } else {
+            setVisible(false);
+            mstrrCarritoFrame.pack();
+            mstrrCarritoFrame.setVisible(true);
+            mstrrCarritoFrame.setLocationRelativeTo(null);
+            mostrarCarritoTxtArea.setEditable(false); // esto es para que no se pueda escribir dentro del text area, ya que al escribir dentro, crea un nuevo elemento en arraylists
+            mostrarCarritoTxtArea.setText("");
+            // todo esto mostrara lo que tienes dentro de tu carrito, validado todo
+            int opcion = 0;
+            do {
+                try {
+                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que cosas del tu carrito deseas ver\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
+                if (opcion < 0 || opcion > 7){
+                    JOptionPane.showMessageDialog(null, "No ingresaste un numero valido, Intenta de nuevo");
                 } else {
-                    switch (opcion){
-                        case 1:
-                            for (int i = 0; i < camisas.size(); i++) {
-                                mostrarCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
-                            } 
-                            break;
-                        case 2:
-                            for (int i = 0; i < pantalones.size(); i++) {
-                                mostrarCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                    if (opcion == 0){
+                        mostrarCarritoTxtArea.setText("");
+                        for (int i = 0; i < camisas.size(); i++) {
+                            mostrarCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
+                        } 
+                        for (int i = 0; i < pantalones.size(); i++) {
+                            mostrarCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                        }
+                        for (int i = 0; i < gorras.size(); i++) {
+                            mostrarCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
+                        }
+                        for (int i = 0; i < sueteres.size(); i++) {
+                            mostrarCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
+                        }
+                        for (int i = 0; i < calzados.size(); i++) {
+                            mostrarCarritoTxtArea.append("\n\n-------Calzado " + (i+1) +"---------" + calzados.get(i));
+                        }
+                        for (int i = 0; i < calzonetas.size(); i++) {
+                            mostrarCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
+                        }
+                        break;
+                    }else if (opcion == 1 && camisas.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en camisas");
+                    } else if (opcion == 2 && pantalones.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en pantalones");
+                    } else if (opcion == 3 && gorras.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en gorras");
+                    } else if (opcion == 4 && sueteres.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en sueteres");
+                    } else if (opcion == 5 && calzados.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en zapatos");
+                    } else if (opcion == 6 && calzonetas.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en calzonetas");
+                    } else {
+                        switch (opcion){
+                            case 1:
+                                for (int i = 0; i < camisas.size(); i++) {
+                                    mostrarCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
+                                } 
+                                break;
+                            case 2:
+                                for (int i = 0; i < pantalones.size(); i++) {
+                                    mostrarCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                                }
+                                break;
+                            case 3:
+                                for (int i = 0; i < gorras.size(); i++) {
+                                    mostrarCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
+                                }
+                                break;
+                            case 4:
+                                for (int i = 0; i < sueteres.size(); i++) {
+                                    mostrarCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
+                                }
+                                break;
+                            case 5:
+                                for (int i = 0; i < calzados.size(); i++) {
+                                    mostrarCarritoTxtArea.append("\n\n-------Calzado " + (i+1) +"---------" + calzados.get(i));
+                                }
+                                break;
+                            case 6:
+                                for (int i = 0; i < calzonetas.size(); i++) {
+                                    mostrarCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
+                                }
+                                break;
+                            case 7:
+                                mstrrCarritoFrame.setVisible(false);
+                                setVisible(true);
+                                break;
                             }
-                            break;
-                        case 3:
-                            for (int i = 0; i < gorras.size(); i++) {
-                                mostrarCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
-                            }
-                            break;
-                        case 4:
-                            for (int i = 0; i < sueteres.size(); i++) {
-                                mostrarCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
-                            }
-                            break;
-                        case 5:
-                            for (int i = 0; i < calzados.size(); i++) {
-                                mostrarCarritoTxtArea.append("\n\n-------Zapato " + (i+1) +"---------" + calzados.get(i));
-                            }
-                            break;
-                        case 6:
-                            for (int i = 0; i < calzonetas.size(); i++) {
-                                mostrarCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
-                            }
-                            break;
-                        case 7:
-                            mstrrCarritoFrame.setVisible(false);
-                            setVisible(true);
-                            break;
+                        }
                     }
+                } catch (NumberFormatException exception){
+                    JOptionPane.showMessageDialog(null, "No ingresaste un valor correcto");
                 }
-            }
-        } while (opcion != 7);
+            } while (opcion != 7);  
+        }
     }//GEN-LAST:event_mostrarBtnActionPerformed
 
     private void atrasMstrrCrrtoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasMstrrCrrtoBtnMouseEntered

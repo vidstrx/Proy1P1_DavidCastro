@@ -26,21 +26,31 @@ public class TiendaDeRopa {
     public static Ropa opcionCant(String nombre, String tipo, int cantidad, String color, int precio){
         int opcion = 0, opcColor = 0;
         do { // Validaciones de lo que ingresa el usuario de la cantidad que hay disponible
-            opcion = Integer.parseInt(JOptionPane.showInputDialog("Precio normal -> " + precio + "\nIngresa la cantidad a llevar. Cantidad disponible: " + cantidad));
-            if (opcion < 0){
-                JOptionPane.showMessageDialog(null, "No ingresaste una cantidad correcta");
-            } else if (opcion>cantidad){
-                JOptionPane.showMessageDialog(null, "No tenemos una cantidad de " + opcion + " en nuestro inventario");
-            }
-        } while (opcion < 0 || opcion > cantidad);
+            try {
+                opcion = Integer.parseInt(JOptionPane.showInputDialog("Precio normal -> " + precio + "\nIngresa la cantidad a llevar. Cantidad disponible: " + cantidad));
+                if (opcion < 1){
+                    JOptionPane.showMessageDialog(null, "No ingresaste una cantidad correcta");
+                } else if (opcion>cantidad){
+                    JOptionPane.showMessageDialog(null, "No tenemos una cantidad de " + opcion + " en nuestro inventario");
+                }
+                } catch (NumberFormatException exception){
+                    JOptionPane.showMessageDialog(null, "No ingresaste un valor correcto");
+                }
+            } while (opcion < 1 || opcion > cantidad);
+            
         do{
-            opcColor = Integer.parseInt(JOptionPane.showInputDialog(ropa.mostrarColores() +"\nIngresa la posicion del color que llevaras"));
-            if (opcColor < 1 || opcColor > 6){
-                JOptionPane.showMessageDialog(null, "No ingresaste una posicion valida");
-            } else {
-               color = ropa.escogerColor(opcColor);
-            }
-        } while (opcColor < 1 || opcColor > 6);
+                try{
+                    opcColor = Integer.parseInt(JOptionPane.showInputDialog(ropa.mostrarColores() +"\nIngresa la posicion del color que llevaras"));
+                    if (opcColor < 1 || opcColor > 6){
+                        JOptionPane.showMessageDialog(null, "No ingresaste una posicion valida");
+                    } else {
+                       color = ropa.escogerColor(opcColor);
+                    }
+                    
+                } catch (NumberFormatException exception){
+                    JOptionPane.showMessageDialog(null, "No ingresaste un valor correcto");
+                }
+            } while (opcColor < 1 || opcColor > 6);
         cantidad = cantidad - opcion; // se resta la opcion escogida con la cantidad total para obtener lo que queda de inventario
         precio = precio * opcion; // dependiendo de la opcion escogida, se multiplicara el precio con la opcion para sacar el monto total a pagar 
         ropa = new Ropa(nombre,tipo,opcion,color,precio);
