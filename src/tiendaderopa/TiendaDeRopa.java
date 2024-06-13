@@ -26,7 +26,7 @@ public class TiendaDeRopa {
     public static Ropa opcionCant(String nombre, String tipo, int cantidad, String color, int precio){
         int opcion = 0, opcColor = 0;
         do { // Validaciones de lo que ingresa el usuario de la cantidad que hay disponible
-            opcion = Integer.parseInt(JOptionPane.showInputDialog("Ingresa la cantidad a llevar. Cantidad disponible: " + cantidad));
+            opcion = Integer.parseInt(JOptionPane.showInputDialog("Precio normal -> " + precio + "\nIngresa la cantidad a llevar. Cantidad disponible: " + cantidad));
             if (opcion < 0){
                 JOptionPane.showMessageDialog(null, "No ingresaste una cantidad correcta");
             } else if (opcion>cantidad){

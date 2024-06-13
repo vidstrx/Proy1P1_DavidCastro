@@ -71,8 +71,8 @@ public class Ropa {
     
     public String mostrarColores(){
         String matrizColores [][] = {
-            {"1. Negro","2. Amarillo","3. Azul"},
-            {"4. Blanco","5. Rojo","6. Gris"}
+            {"1. Negro","2. Rojo","3. Azul"},
+            {"4. Blanco","5. Cafe","6. Gris"}
         };
         String colores = "";
         for (int i = 0; i < matrizColores.length; i++) {
@@ -85,8 +85,8 @@ public class Ropa {
     }
     public String escogerColor(int posicion){
         String colores [][] = {
-            {"1. Negro","2. Amarillo","3. Azul"},
-            {"4. Blanco","5. Rojo","6. Gris"}
+            {"1. Negro","2. Rojo","3. Azul"},
+            {"4. Blanco","5. Cafe","6. Gris"}
         };
         String color = "";
          switch (posicion) {
