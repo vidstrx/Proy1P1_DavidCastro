@@ -24,7 +24,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     public VentanaMenuTienda() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -109,6 +109,14 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         clzntCargoBtn = new javax.swing.JButton();
         clzntJeanBtn = new javax.swing.JButton();
         fondoClzntsLabel = new javax.swing.JLabel();
+        elmnrCarritoFrame = new javax.swing.JFrame();
+        elmnrCrrtoFondoPanel = new javax.swing.JPanel();
+        elmnrCrrtoPanel = new javax.swing.JPanel();
+        elmnrCrrtoLabel = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        elmnrCarritoTxtArea = new javax.swing.JTextArea();
+        atrasElmnrCrrtoBtn = new javax.swing.JButton();
+        fondoElmnrCrrtoLabel = new javax.swing.JLabel();
         logoLabel = new javax.swing.JLabel();
         tituloLabel = new javax.swing.JLabel();
         catalogoBtn = new javax.swing.JButton();
@@ -938,6 +946,57 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
         calzonetasCtlgFrame.getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 340));
 
+        elmnrCarritoFrame.setSize(new java.awt.Dimension(416, 498));
+        elmnrCarritoFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        elmnrCrrtoFondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        elmnrCrrtoPanel.setBackground(new java.awt.Color(51, 51, 51));
+        elmnrCrrtoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        elmnrCrrtoLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        elmnrCrrtoLabel.setForeground(new java.awt.Color(204, 204, 204));
+        elmnrCrrtoLabel.setText("Eliminar del carrito");
+        elmnrCrrtoPanel.add(elmnrCrrtoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        elmnrCrrtoFondoPanel.add(elmnrCrrtoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 200, 50));
+
+        elmnrCarritoTxtArea.setBackground(new java.awt.Color(153, 153, 153));
+        elmnrCarritoTxtArea.setColumns(20);
+        elmnrCarritoTxtArea.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        elmnrCarritoTxtArea.setForeground(new java.awt.Color(0, 0, 0));
+        elmnrCarritoTxtArea.setRows(5);
+        jScrollPane2.setViewportView(elmnrCarritoTxtArea);
+
+        elmnrCrrtoFondoPanel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 350, 350));
+
+        atrasElmnrCrrtoBtn.setBackground(new java.awt.Color(51, 51, 51));
+        atrasElmnrCrrtoBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasElmnrCrrtoBtn.setForeground(new java.awt.Color(204, 204, 204));
+        atrasElmnrCrrtoBtn.setText("Atras");
+        atrasElmnrCrrtoBtn.setBorder(null);
+        atrasElmnrCrrtoBtn.setBorderPainted(false);
+        atrasElmnrCrrtoBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasElmnrCrrtoBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasElmnrCrrtoBtnMouseExited(evt);
+            }
+        });
+        atrasElmnrCrrtoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasElmnrCrrtoBtnActionPerformed(evt);
+            }
+        });
+        elmnrCrrtoFondoPanel.add(atrasElmnrCrrtoBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 520, 70, 30));
+
+        fondoElmnrCrrtoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        fondoElmnrCrrtoLabel.setText("jLabel1");
+        elmnrCrrtoFondoPanel.add(fondoElmnrCrrtoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, -1));
+
+        elmnrCarritoFrame.getContentPane().add(elmnrCrrtoFondoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 560));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1008,6 +1067,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 eliminarBtnMouseExited(evt);
+            }
+        });
+        eliminarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarBtnActionPerformed(evt);
             }
         });
         getContentPane().add(eliminarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 360, 40));
@@ -1197,8 +1261,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         // Talvez hacer un do while hasta que la cantidad total sea 0, usar joption para conseguir el numero que ingreso e ir restando.
         int precio = 600; int cantidadTotal = 10; String nombre = "Camisa"; String tipo = "Camisa manga corta";
         
-        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
-        
+        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));   
     }//GEN-LAST:event_camisaMngCrtaBtnActionPerformed
     // ---------------------------------------------------------------------- Termina una parte de todo el frame de CAMISAS ---------------------------------------------------------------------------------- //
     
@@ -1215,7 +1278,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
             mostrarCarritoTxtArea.setEditable(false); // esto es para que no se pueda escribir dentro del text area, ya que al escribir dentro, crea un nuevo elemento en arraylists
             mostrarCarritoTxtArea.setText("");
             // todo esto mostrara lo que tienes dentro de tu carrito, validado todo
-            int opcion = 0;
+            int opcion = 0; 
             do {
                 try {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que cosas del tu carrito deseas ver\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
@@ -1672,7 +1735,190 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         
         camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_camisetaMngLrgBtnActionPerformed
-    // ------------------------------------ Termina la parte faltante de las funcionalidades del frame CAMISAS --------------------------------------------------//
+    // ------------------------------------ Termina la parte faltante de las funcionalidades del frame CAMISAS -------------------------------------------------- //
+    
+
+    // ----------------------------------------------------------------------------- Funcionalidades de todo el frame ELIMINAR ----------------------------------------------------------------------------------------- //
+    private void atrasElmnrCrrtoBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasElmnrCrrtoBtnMouseEntered
+        atrasElmnrCrrtoBtn.setBackground(Color.decode("#480000"));
+    }//GEN-LAST:event_atrasElmnrCrrtoBtnMouseEntered
+
+    private void atrasElmnrCrrtoBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasElmnrCrrtoBtnMouseExited
+        atrasElmnrCrrtoBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_atrasElmnrCrrtoBtnMouseExited
+
+    private void atrasElmnrCrrtoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasElmnrCrrtoBtnActionPerformed
+        elmnrCarritoFrame.setVisible(false);
+        setVisible(true);
+    }//GEN-LAST:event_atrasElmnrCrrtoBtnActionPerformed
+
+    private void eliminarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarBtnActionPerformed
+        /* mostrar TODO lo que agrego al TextArea de (Eliminar) tal cual como esta en MOSTRAR CARRITO, 
+        luego con JOpt, mostrar la lista del catalogo ((1) Camisas, 2) Pantalones, 3) Gorras, etc) tal cual como esta en MOSTRAR CARRITO.
+        y que escoga cual de esas eliminar (Ingresa 1 o 2 o 3, etc) y de la que escoja, se borrara lo que estaba en el TextArea
+        y mostrara la lista del item que selecciono y que ingrese la posicion del item que eliminara. y preguntar si esta seguro o no
+        en eliminarlo. Tambien estara la opcion de eliminar todo del carrito
+        para validar la posicion que ingrese el usuario, usar if (posicion > camisa.size() || posicion < 0), etc
+        y para eliminar seria camisa.remove(posicion). despues de haber eliminado, se mostrara otra vez toda la lista solo que ya no 
+        estara el item que el elimino, y volver a preguntar que item eliminara, hasta que el seleccione salir.
+        */
+        int opcion = 0;
+        if (camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && calzados.isEmpty() && calzonetas.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado para eliminar");
+        } else {
+            setVisible(false);
+            elmnrCarritoFrame.pack();
+            elmnrCarritoTxtArea.setEditable(false); // para que el usuario no ingrese nada adentro del Text Area
+            elmnrCarritoFrame.setVisible(true);
+            elmnrCarritoFrame.setLocationRelativeTo(null);
+            do {
+                elmnrCarritoTxtArea.setText("");
+                // Aqui se muestra todas las ropas que haz agregado 
+                for (int i = 0; i < camisas.size(); i++) {
+                    elmnrCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
+                } 
+                for (int i = 0; i < pantalones.size(); i++) {
+                    elmnrCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                }
+                for (int i = 0; i < gorras.size(); i++) {
+                    elmnrCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
+                }
+                for (int i = 0; i < sueteres.size(); i++) {
+                    elmnrCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
+                }
+                for (int i = 0; i < calzados.size(); i++) {
+                    elmnrCarritoTxtArea.append("\n\n-------Calzado " + (i+1) +"---------" + calzados.get(i));
+                }
+                for (int i = 0; i < calzonetas.size(); i++) {
+                    elmnrCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
+                }
+                // Pedir que es lo que desea eliminar
+                try {
+                    opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que items de tu carrito deseas eliminar?\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
+                    if (opcion < 0 || opcion > 7){
+                        JOptionPane.showMessageDialog(null, "No ingresaste un numero valido\nIntenta de nuevo");
+                    } else if (opcion == 0) {
+                        int valido = JOptionPane.showConfirmDialog(rootPane, "Estas seguro que quieres eliminar todo?", "Eliminar", JOptionPane.YES_NO_CANCEL_OPTION);
+                        if (valido == JOptionPane.YES_OPTION){
+                            camisas.clear(); pantalones.clear(); gorras.clear(); 
+                            sueteres.clear(); calzados.clear(); calzonetas.clear();
+                            JOptionPane.showMessageDialog(null, "Se elimino todo correctamente");
+                            elmnrCarritoFrame.setVisible(false);
+                            setVisible(true);
+                            break;
+                        }
+                    } else if (opcion == 1 && camisas.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en camisas para eliminar");
+                    } else if (opcion == 2 && pantalones.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en pantalones para eliminar");
+                    } else if (opcion == 3 && gorras.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en gorras para eliminar");
+                    } else if (opcion == 4 && sueteres.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en sueteres para eliminar");
+                    } else if (opcion == 5 && calzados.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en zapatos para eliminar");
+                    } else if (opcion == 6 && calzonetas.isEmpty()){
+                        JOptionPane.showMessageDialog(null, "No tienes nada agregado en calzonetas para eliminar");
+                    } else {
+                        int posicion = 0; // Para conseguir la posicion que desea eliminar
+                        switch (opcion){
+                            case 1: // ----------------------------------------------------------------- Caso 1 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoTxtArea.setText("");
+                                for (int i = 0; i < camisas.size(); i++) { // Muestra todo lo que el usuario agrego en CAMISAS
+                                    elmnrCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
+                                }
+                                /* se le resta 1 por que las arraylist empiezan desde 0, y en la pantalla se muestra desde 1 en adelante 
+                                por lo que si ingresa 1, se eliminara lo que esta en la primera posicion del arraylist que este seria 0, y asi para los siguientes numeros*/
+                                posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de la camisa a eliminar")) - 1;
+                                if (posicion < 0 || posicion >= camisas.size()){
+                                    JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de camisas");
+                                } else {
+                                    camisas.remove(posicion);
+                                    JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                                }
+                                break;
+                            case 2: // ----------------------------------------------------------------- Caso 2 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoTxtArea.setText("");
+                                for (int i = 0; i < pantalones.size(); i++) { // Muestra todo lo que el usuario agrego en PANTALONES
+                                    elmnrCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
+                                }
+
+                                posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero del pantalon a eliminar")) - 1;
+                                if (posicion < 0 || posicion >= pantalones.size()){
+                                    JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de pantalones");
+                                } else {
+                                    pantalones.remove(posicion);
+                                    JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                                }
+                                break;
+                            case 3: // ----------------------------------------------------------------- Caso 3 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoTxtArea.setText("");
+                                for (int i = 0; i < gorras.size(); i++) { // Muestra todo lo que el usuario agrego en GORRAS
+                                    elmnrCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
+                                }
+
+                                posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de la gorra a eliminar")) - 1;
+                                if (posicion < 0 || posicion >= gorras.size()){ 
+                                    JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de gorras");
+                                } else {
+                                    gorras.remove(posicion);
+                                    JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                                }
+                                break;
+                            case 4: // ----------------------------------------------------------------- Caso 4 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoTxtArea.setText("");
+                                for (int i = 0; i < sueteres.size(); i++) { // Muestra todo lo que el usuario agrego en SUETERES
+                                    elmnrCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
+                                }
+
+                                posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero del sueter a eliminar")) - 1;
+                                if (posicion < 0 || posicion >= sueteres.size()){
+                                    JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de sueteres");
+                                } else {
+                                    sueteres.remove(posicion);
+                                    JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                                }
+                                break;
+                            case 5: // ----------------------------------------------------------------- Caso 5 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoTxtArea.setText("");
+                                for (int i = 0; i < calzados.size(); i++) { // Muestra todo lo que el usuario agrego en CALZADOS
+                                    elmnrCarritoTxtArea.append("\n\n-------Calzado " + (i+1) +"---------" + calzados.get(i));
+                                }
+
+                                posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero del calzado a eliminar")) - 1;
+                                if (posicion < 0 || posicion >= calzados.size()){
+                                    JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de calzados");
+                                } else {
+                                    calzados.remove(posicion);
+                                    JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                                }
+                                break;
+                            case 6: // ----------------------------------------------------------------- Caso 6 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoTxtArea.setText("");
+                                for (int i = 0; i < calzonetas.size(); i++) { // Muestra todo lo que el usuario agrego en CALZONETAS
+                                    elmnrCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
+                                }
+
+                                posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de la calzoneta a eliminar")) - 1;
+                                if (posicion < 0 || posicion >= calzonetas.size()){
+                                    JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de calzonetas");
+                                } else {
+                                    calzonetas.remove(posicion);
+                                    JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                                }
+                                break;
+                            case 7: // ----------------------------------------------------------------- Caso 7 ------------------------------------------------------------------------------------ //
+                                elmnrCarritoFrame.setVisible(false);
+                                setVisible(true);
+                                break;
+                        }
+                    }
+                } catch (NumberFormatException exception){
+                    JOptionPane.showMessageDialog(null, "No ingresaste un valor correcto");
+                }
+            } while (opcion != 7);
+        }
+    }//GEN-LAST:event_eliminarBtnActionPerformed
     
     /**
      * @param args the command line arguments
@@ -1714,6 +1960,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JButton atrasClzntsBtn;
     private javax.swing.JButton atrasCmsasBtn;
     private javax.swing.JButton atrasCtlgBtn;
+    private javax.swing.JButton atrasElmnrCrrtoBtn;
     private javax.swing.JButton atrasGorrasBtn;
     private javax.swing.JButton atrasMstrrCrrtoBtn;
     private javax.swing.JButton atrasPntlnsBtn;
@@ -1746,10 +1993,16 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JButton clzntJeanBtn;
     private javax.swing.JButton comprarBtn;
     private javax.swing.JButton eliminarBtn;
+    private javax.swing.JFrame elmnrCarritoFrame;
+    private javax.swing.JTextArea elmnrCarritoTxtArea;
+    private javax.swing.JPanel elmnrCrrtoFondoPanel;
+    private javax.swing.JLabel elmnrCrrtoLabel;
+    private javax.swing.JPanel elmnrCrrtoPanel;
     private javax.swing.JLabel fondoCalzadoLabel;
     private javax.swing.JLabel fondoClzntsLabel;
     private javax.swing.JLabel fondoCmsasLabel;
     private javax.swing.JLabel fondoCtlgLabel;
+    private javax.swing.JLabel fondoElmnrCrrtoLabel;
     private javax.swing.JLabel fondoGorrasLabel;
     private javax.swing.JLabel fondoLabel;
     private javax.swing.JLabel fondoMstrrCrrtoLabel;
@@ -1770,6 +2023,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JLabel menuTituloLabel;
     private javax.swing.JButton mostrarBtn;
