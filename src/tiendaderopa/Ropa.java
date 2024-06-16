@@ -4,9 +4,8 @@
  */
 package tiendaderopa;
 
-import javax.swing.JOptionPane;
-
 public class Ropa {
+    // Atributos de la clase Ropa
     private String nombre;
     private String tipo;
     private int cantidad;
@@ -15,7 +14,7 @@ public class Ropa {
 
     public Ropa() {
     }
-
+    // Constructor sobrecargado
     public Ropa(String nombre, String tipo, int cantidad, String color, int precio) {
         this.nombre = nombre;
         this.tipo = tipo;
@@ -23,7 +22,7 @@ public class Ropa {
         this.color = color;
         this.precio = precio;
     }
-
+    // Getters y Setters
     public String getNombre() {
         return nombre;
     }
@@ -69,6 +68,7 @@ public class Ropa {
         return "\nNombre: " + nombre + "\nTipo: " + tipo + "\nCantidad: " + cantidad + "\nColor: " + color +"\nPrecio: " + precio;
     }
     
+    // Este metodo simplemente mostrara una matriz de los colores disponibles, que los metera dentro de un String normal para poder mostrarlo en JOptionPane
     public String mostrarColores(){
         String matrizColores [][] = {
             {"1. Negro","2. Rojo","3. Azul"},
@@ -83,10 +83,12 @@ public class Ropa {
         }
         return colores;
     }
+    
+    // Este metodo recibe la posicion en la que esta el color que ingreso la persona y retornara ese mismo color como tipo String
     public String escogerColor(int posicion){
         String colores [][] = {
-            {"1. Negro","2. Rojo","3. Azul"},
-            {"4. Blanco","5. Cafe","6. Gris"}
+            {"Negro","Rojo","Azul"},
+            {"Blanco","Cafe","Gris"}
         };
         String color = "";
          switch (posicion) {

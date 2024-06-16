@@ -17,7 +17,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     public static ArrayList <Ropa> sueteres = new ArrayList();
     public static ArrayList <Ropa> calzados = new ArrayList();
     public static ArrayList <Ropa> calzonetas = new ArrayList();
-
+    
     /**
      * Creates new form VentanaMenuTienda
      */
@@ -117,6 +117,30 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         elmnrCarritoTxtArea = new javax.swing.JTextArea();
         atrasElmnrCrrtoBtn = new javax.swing.JButton();
         fondoElmnrCrrtoLabel = new javax.swing.JLabel();
+        comprarFrame = new javax.swing.JFrame();
+        comprarFondoPanel = new javax.swing.JPanel();
+        comprarPanel = new javax.swing.JPanel();
+        comprarLabel = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        comprarTxtArea = new javax.swing.JTextArea();
+        atrasComprarBtn = new javax.swing.JButton();
+        prspstoComprarTxtField = new javax.swing.JTextField();
+        edadLabel = new javax.swing.JLabel();
+        presupuestoLabel = new javax.swing.JLabel();
+        nombreComprarTxtField = new javax.swing.JTextField();
+        nombreLabel = new javax.swing.JLabel();
+        edadComprarTxtField = new javax.swing.JTextField();
+        ropaComprarLabel = new javax.swing.JLabel();
+        botonComprar = new javax.swing.JButton();
+        fondoComprarLabel = new javax.swing.JLabel();
+        facturaFrame = new javax.swing.JFrame();
+        facturaFondoPanel = new javax.swing.JPanel();
+        facturaPanel = new javax.swing.JPanel();
+        facturaLabel = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        facturaTxtArea = new javax.swing.JTextArea();
+        atrasFacturaBtn = new javax.swing.JButton();
+        fondoFacturaLabel = new javax.swing.JLabel();
         logoLabel = new javax.swing.JLabel();
         tituloLabel = new javax.swing.JLabel();
         catalogoBtn = new javax.swing.JButton();
@@ -997,6 +1021,175 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
         elmnrCarritoFrame.getContentPane().add(elmnrCrrtoFondoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 560));
 
+        comprarFrame.setSize(new java.awt.Dimension(416, 498));
+        comprarFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        comprarFondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        comprarPanel.setBackground(new java.awt.Color(51, 51, 51));
+        comprarPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        comprarLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        comprarLabel.setForeground(new java.awt.Color(204, 204, 204));
+        comprarLabel.setText("Comprar");
+        comprarPanel.add(comprarLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, -1, -1));
+
+        comprarFondoPanel.add(comprarPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 200, 30));
+
+        comprarTxtArea.setBackground(new java.awt.Color(153, 153, 153));
+        comprarTxtArea.setColumns(20);
+        comprarTxtArea.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        comprarTxtArea.setForeground(new java.awt.Color(0, 0, 0));
+        comprarTxtArea.setRows(5);
+        jScrollPane3.setViewportView(comprarTxtArea);
+
+        comprarFondoPanel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 350, 400));
+
+        atrasComprarBtn.setBackground(new java.awt.Color(51, 51, 51));
+        atrasComprarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasComprarBtn.setForeground(new java.awt.Color(204, 204, 204));
+        atrasComprarBtn.setText("Atras");
+        atrasComprarBtn.setBorder(null);
+        atrasComprarBtn.setBorderPainted(false);
+        atrasComprarBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasComprarBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasComprarBtnMouseExited(evt);
+            }
+        });
+        atrasComprarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasComprarBtnActionPerformed(evt);
+            }
+        });
+        comprarFondoPanel.add(atrasComprarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 630, 70, 30));
+
+        prspstoComprarTxtField.setBackground(new java.awt.Color(51, 51, 51));
+        prspstoComprarTxtField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        prspstoComprarTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        prspstoComprarTxtField.setBorder(null);
+        prspstoComprarTxtField.setCaretColor(new java.awt.Color(255, 255, 255));
+        comprarFondoPanel.add(prspstoComprarTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 170, 30));
+
+        edadLabel.setBackground(new java.awt.Color(51, 51, 51));
+        edadLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        edadLabel.setForeground(new java.awt.Color(255, 255, 255));
+        edadLabel.setText("Edad:");
+        comprarFondoPanel.add(edadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, -1));
+
+        presupuestoLabel.setBackground(new java.awt.Color(51, 51, 51));
+        presupuestoLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        presupuestoLabel.setForeground(new java.awt.Color(255, 255, 255));
+        presupuestoLabel.setText("Presupuesto:");
+        comprarFondoPanel.add(presupuestoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
+
+        nombreComprarTxtField.setBackground(new java.awt.Color(51, 51, 51));
+        nombreComprarTxtField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        nombreComprarTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        nombreComprarTxtField.setBorder(null);
+        nombreComprarTxtField.setCaretColor(new java.awt.Color(255, 255, 255));
+        nombreComprarTxtField.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        comprarFondoPanel.add(nombreComprarTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 170, 30));
+
+        nombreLabel.setBackground(new java.awt.Color(51, 51, 51));
+        nombreLabel.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        nombreLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nombreLabel.setText("Nombre: ");
+        comprarFondoPanel.add(nombreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        edadComprarTxtField.setBackground(new java.awt.Color(51, 51, 51));
+        edadComprarTxtField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        edadComprarTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        edadComprarTxtField.setBorder(null);
+        edadComprarTxtField.setCaretColor(new java.awt.Color(255, 255, 255));
+        comprarFondoPanel.add(edadComprarTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 170, 30));
+
+        ropaComprarLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ropaComprarLabel.setForeground(new java.awt.Color(0, 0, 0));
+        ropaComprarLabel.setText("Ropa a Comprar");
+        comprarFondoPanel.add(ropaComprarLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
+
+        botonComprar.setBackground(new java.awt.Color(51, 51, 51));
+        botonComprar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botonComprar.setForeground(new java.awt.Color(204, 204, 204));
+        botonComprar.setText("Comprar");
+        botonComprar.setBorder(null);
+        botonComprar.setBorderPainted(false);
+        botonComprar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                botonComprarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonComprarMouseExited(evt);
+            }
+        });
+        botonComprar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonComprarActionPerformed(evt);
+            }
+        });
+        comprarFondoPanel.add(botonComprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 630, 80, 30));
+
+        fondoComprarLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        fondoComprarLabel.setText("jLabel1");
+        comprarFondoPanel.add(fondoComprarLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 670));
+
+        comprarFrame.getContentPane().add(comprarFondoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 670));
+
+        facturaFrame.setSize(new java.awt.Dimension(416, 498));
+        facturaFrame.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        facturaFondoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        facturaPanel.setBackground(new java.awt.Color(51, 51, 51));
+        facturaPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        facturaLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        facturaLabel.setForeground(new java.awt.Color(204, 204, 204));
+        facturaLabel.setText("Factura");
+        facturaPanel.add(facturaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, -1, -1));
+
+        facturaFondoPanel.add(facturaPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 180, 30));
+
+        facturaTxtArea.setBackground(new java.awt.Color(51, 51, 51));
+        facturaTxtArea.setColumns(20);
+        facturaTxtArea.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        facturaTxtArea.setForeground(new java.awt.Color(255, 255, 255));
+        facturaTxtArea.setRows(5);
+        facturaTxtArea.setBorder(null);
+        jScrollPane4.setViewportView(facturaTxtArea);
+
+        facturaFondoPanel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 350, 320));
+
+        atrasFacturaBtn.setBackground(new java.awt.Color(51, 51, 51));
+        atrasFacturaBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        atrasFacturaBtn.setForeground(new java.awt.Color(204, 204, 204));
+        atrasFacturaBtn.setText("Atras");
+        atrasFacturaBtn.setBorder(null);
+        atrasFacturaBtn.setBorderPainted(false);
+        atrasFacturaBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                atrasFacturaBtnMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                atrasFacturaBtnMouseExited(evt);
+            }
+        });
+        atrasFacturaBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasFacturaBtnActionPerformed(evt);
+            }
+        });
+        facturaFondoPanel.add(atrasFacturaBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 70, 30));
+
+        fondoFacturaLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo gris.jpg"))); // NOI18N
+        fondoFacturaLabel.setText("jLabel1");
+        facturaFondoPanel.add(fondoFacturaLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 670));
+
+        facturaFrame.getContentPane().add(facturaFondoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 420));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1089,6 +1282,11 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                 comprarBtnMouseExited(evt);
             }
         });
+        comprarBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarBtnActionPerformed(evt);
+            }
+        });
         getContentPane().add(comprarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 360, 40));
 
         salirBtn.setBackground(new java.awt.Color(51, 51, 51));
@@ -1160,7 +1358,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void salirBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirBtnActionPerformed
         System.out.println("Gracias por visitarnos :D");
-        System.exit(0); // esta instruccion sale del todo el programa cuando se presiona el boton salir en el menu de la tienda.
+        System.exit(0); // esta instruccion sale del todo el programa cuando se presiona el boton SALIR en el menu de la tienda.
     }//GEN-LAST:event_salirBtnActionPerformed
     // --------------------------------------------------- Termina las funcionalidades del frame PRINCIPAL ---------------------------------------------------------------- //
     
@@ -1258,16 +1456,16 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     }//GEN-LAST:event_camisasCtlgBtnActionPerformed
 
     private void camisaMngCrtaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camisaMngCrtaBtnActionPerformed
-        // Talvez hacer un do while hasta que la cantidad total sea 0, usar joption para conseguir el numero que ingreso e ir restando.
         int precio = 600; int cantidadTotal = 10; String nombre = "Camisa"; String tipo = "Camisa manga corta";
         
-        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));   
+        camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_camisaMngCrtaBtnActionPerformed
     // ---------------------------------------------------------------------- Termina una parte de todo el frame de CAMISAS ---------------------------------------------------------------------------------- //
     
     
     // ------------------------------------------------------------ Las funcionalidades de todo el frame MOSTRAR CATALOGO ------------------------------------------------------------------------------- //
     private void mostrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarBtnActionPerformed
+        // Valida si no hay elementos dentro de todas las Arraylists
         if (camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && calzados.isEmpty() && calzonetas.isEmpty()){
                     JOptionPane.showMessageDialog(null, "No tienes nada en tu carrito");
         } else {
@@ -1284,7 +1482,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que cosas del tu carrito deseas ver\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
                 if (opcion < 0 || opcion > 7){
                     JOptionPane.showMessageDialog(null, "No ingresaste un numero valido, Intenta de nuevo");
-                } else {
+                } else { // Muestra todo lo que haz agregado hasta el momento
                     if (opcion == 0){
                         mostrarCarritoTxtArea.setText("");
                         for (int i = 0; i < camisas.size(); i++) {
@@ -1306,7 +1504,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                             mostrarCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
                         }
                         break;
-                    }else if (opcion == 1 && camisas.isEmpty()){
+                    }else if (opcion == 1 && camisas.isEmpty()){ // Valida si la opcion escogida hay ropa dentro de alguna Arraylist
                         JOptionPane.showMessageDialog(null, "No tienes nada agregado en camisas");
                     } else if (opcion == 2 && pantalones.isEmpty()){
                         JOptionPane.showMessageDialog(null, "No tienes nada agregado en pantalones");
@@ -1318,34 +1516,40 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(null, "No tienes nada agregado en zapatos");
                     } else if (opcion == 6 && calzonetas.isEmpty()){
                         JOptionPane.showMessageDialog(null, "No tienes nada agregado en calzonetas");
-                    } else {
+                    } else { // Muestra la ropa que el usuario ingreso
                         switch (opcion){
                             case 1:
+                                mostrarCarritoTxtArea.setText("");
                                 for (int i = 0; i < camisas.size(); i++) {
                                     mostrarCarritoTxtArea.append("\n\n-------Camisa " + (i+1) +"---------" + camisas.get(i));
                                 } 
                                 break;
                             case 2:
+                                mostrarCarritoTxtArea.setText("");
                                 for (int i = 0; i < pantalones.size(); i++) {
                                     mostrarCarritoTxtArea.append("\n\n-------Pantalon " + (i+1) +"---------" + pantalones.get(i));
                                 }
                                 break;
                             case 3:
+                                mostrarCarritoTxtArea.setText("");
                                 for (int i = 0; i < gorras.size(); i++) {
                                     mostrarCarritoTxtArea.append("\n\n-------Gorra " + (i+1) +"---------" + gorras.get(i));
                                 }
                                 break;
                             case 4:
+                                mostrarCarritoTxtArea.setText("");
                                 for (int i = 0; i < sueteres.size(); i++) {
                                     mostrarCarritoTxtArea.append("\n\n-------Sueter " + (i+1) +"---------" + sueteres.get(i));
                                 }
                                 break;
                             case 5:
+                                mostrarCarritoTxtArea.setText("");
                                 for (int i = 0; i < calzados.size(); i++) {
                                     mostrarCarritoTxtArea.append("\n\n-------Calzado " + (i+1) +"---------" + calzados.get(i));
                                 }
                                 break;
                             case 6:
+                                mostrarCarritoTxtArea.setText("");
                                 for (int i = 0; i < calzonetas.size(); i++) {
                                     mostrarCarritoTxtArea.append("\n\n-------Calzoneta " + (i+1) +"---------" + calzonetas.get(i));
                                 }
@@ -1357,7 +1561,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                             }
                         }
                     }
-                } catch (NumberFormatException exception){
+                } catch (NumberFormatException exception){ // Valida que sea un numero el que ingrese el usuario
                     JOptionPane.showMessageDialog(null, "No ingresaste un valor correcto");
                 }
             } while (opcion != 7);  
@@ -1395,7 +1599,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void pantalonJeanBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pantalonJeanBtnActionPerformed
         int precio = 500; int cantidadTotal = 10; String nombre = "Pantalon"; String tipo = "Jean";
-        
+        // Agrega la ropa que presiono con el boton
         pantalones.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_pantalonJeanBtnActionPerformed
 
@@ -1481,7 +1685,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void gorraBoinaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gorraBoinaBtnActionPerformed
         int precio = 300; int cantidadTotal = 10; String nombre = "Gorra"; String tipo = "Boina";
-        
+        // Agrega la ropa que presiono con el boton
         gorras.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_gorraBoinaBtnActionPerformed
 
@@ -1553,7 +1757,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void sueterHoodieBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sueterHoodieBtnActionPerformed
         int precio = 1000; int cantidadTotal = 10; String nombre = "Sueter"; String tipo = "Hoodie";
-        
+        // Agrega la ropa que presiono con el boton
         sueteres.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_sueterHoodieBtnActionPerformed
 
@@ -1618,7 +1822,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void calzadoTenisBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calzadoTenisBtnActionPerformed
         int precio = 1200; int cantidadTotal = 10; String nombre = "Calzado"; String tipo = "Tenis";
-        
+        // Agrega la ropa que presiono con el boton
         calzados.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_calzadoTenisBtnActionPerformed
 
@@ -1683,7 +1887,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
 
     private void clzntDprtvaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clzntDprtvaBtnActionPerformed
         int precio = 500; int cantidadTotal = 10; String nombre = "Calzoneta"; String tipo = "Deportiva";
-        
+        // Agrega la ropa que presiono con el boton
         calzonetas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_clzntDprtvaBtnActionPerformed
 
@@ -1720,7 +1924,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     // ----------------------------------------------- La otra parte de las funcionalidades del frame CAMISAS ---------------------------------------------------------- //
     private void camisaMngLrgBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camisaMngLrgBtnActionPerformed
         int precio = 650; int cantidadTotal = 10; String nombre = "Camisa"; String tipo = "Camisa manga Larga";
-        
+        // Agrega la ropa que presiono con el boton
         camisas.add(TiendaDeRopa.opcionCant(nombre,tipo,cantidadTotal,TiendaDeRopa.ropa.mostrarColores(),precio));
     }//GEN-LAST:event_camisaMngLrgBtnActionPerformed
 
@@ -1763,9 +1967,10 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
         estara el item que el elimino, y volver a preguntar que item eliminara, hasta que el seleccione salir.
         */
         int opcion = 0;
+        // Valida si no hay elementos dentro de todas las Arraylists
         if (camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && calzados.isEmpty() && calzonetas.isEmpty()){
                     JOptionPane.showMessageDialog(null, "No tienes nada agregado para eliminar");
-        } else {
+        } else { // Caso contrario mostrar la ropa que eliminara
             setVisible(false);
             elmnrCarritoFrame.pack();
             elmnrCarritoTxtArea.setEditable(false); // para que el usuario no ingrese nada adentro del Text Area
@@ -1795,9 +2000,9 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                 // Pedir que es lo que desea eliminar
                 try {
                     opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Que items de tu carrito deseas eliminar?\n0) Todo lo que agregue\n1) Camisas\n2) Pantalones\n3) Gorras\n4) Sueteres\n5) Zapatos\n6) Calzonetas\n7) Salir"));
-                    if (opcion < 0 || opcion > 7){
+                    if (opcion < 0 || opcion > 7){ // Valida que ingrese un numero permitido
                         JOptionPane.showMessageDialog(null, "No ingresaste un numero valido\nIntenta de nuevo");
-                    } else if (opcion == 0) {
+                    } else if (opcion == 0) { // Pregunta si esta seguro de eliminar todo lo que ha agregado al carrito
                         int valido = JOptionPane.showConfirmDialog(rootPane, "Estas seguro que quieres eliminar todo?", "Eliminar", JOptionPane.YES_NO_CANCEL_OPTION);
                         if (valido == JOptionPane.YES_OPTION){
                             camisas.clear(); pantalones.clear(); gorras.clear(); 
@@ -1807,7 +2012,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                             setVisible(true);
                             break;
                         }
-                    } else if (opcion == 1 && camisas.isEmpty()){
+                    } else if (opcion == 1 && camisas.isEmpty()){ // Valida si ha agregado elementos a los Arraylist
                         JOptionPane.showMessageDialog(null, "No tienes nada agregado en camisas para eliminar");
                     } else if (opcion == 2 && pantalones.isEmpty()){
                         JOptionPane.showMessageDialog(null, "No tienes nada agregado en pantalones para eliminar");
@@ -1830,7 +2035,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 /* se le resta 1 por que las arraylist empiezan desde 0, y en la pantalla se muestra desde 1 en adelante 
                                 por lo que si ingresa 1, se eliminara lo que esta en la primera posicion del arraylist que este seria 0, y asi para los siguientes numeros*/
                                 posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de la camisa a eliminar")) - 1;
-                                if (posicion < 0 || posicion >= camisas.size()){
+                                if (posicion < 0 || posicion >= camisas.size()){ // Valida que el numero que ingrese el usuario este dentro del rango del Arraylist
                                     JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de camisas");
                                 } else {
                                     camisas.remove(posicion);
@@ -1844,7 +2049,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 }
 
                                 posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero del pantalon a eliminar")) - 1;
-                                if (posicion < 0 || posicion >= pantalones.size()){
+                                if (posicion < 0 || posicion >= pantalones.size()){ // Valida que el numero que ingrese el usuario este dentro del rango del Arraylist
                                     JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de pantalones");
                                 } else {
                                     pantalones.remove(posicion);
@@ -1858,7 +2063,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 }
 
                                 posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de la gorra a eliminar")) - 1;
-                                if (posicion < 0 || posicion >= gorras.size()){ 
+                                if (posicion < 0 || posicion >= gorras.size()){ // Valida que el numero que ingrese el usuario este dentro del rango del Arraylist
                                     JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de gorras");
                                 } else {
                                     gorras.remove(posicion);
@@ -1872,7 +2077,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 }
 
                                 posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero del sueter a eliminar")) - 1;
-                                if (posicion < 0 || posicion >= sueteres.size()){
+                                if (posicion < 0 || posicion >= sueteres.size()){ // Valida que el numero que ingrese el usuario este dentro del rango del Arraylist
                                     JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de sueteres");
                                 } else {
                                     sueteres.remove(posicion);
@@ -1886,7 +2091,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 }
 
                                 posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero del calzado a eliminar")) - 1;
-                                if (posicion < 0 || posicion >= calzados.size()){
+                                if (posicion < 0 || posicion >= calzados.size()){ // Valida que el numero que ingrese el usuario este dentro del rango del Arraylist
                                     JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de calzados");
                                 } else {
                                     calzados.remove(posicion);
@@ -1900,7 +2105,7 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 }
 
                                 posicion = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el numero de la calzoneta a eliminar")) - 1;
-                                if (posicion < 0 || posicion >= calzonetas.size()){
+                                if (posicion < 0 || posicion >= calzonetas.size()){ // Valida que el numero que ingrese el usuario este dentro del rango del Arraylist
                                     JOptionPane.showMessageDialog(null, "No esta esa posicion en tu lista de calzonetas");
                                 } else {
                                     calzonetas.remove(posicion);
@@ -1913,12 +2118,128 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
                                 break;
                         }
                     }
-                } catch (NumberFormatException exception){
+                } catch (NumberFormatException exception){ // Valida que sea un numero el que ingrese el usuario
                     JOptionPane.showMessageDialog(null, "No ingresaste un valor correcto");
                 }
             } while (opcion != 7);
         }
     }//GEN-LAST:event_eliminarBtnActionPerformed
+    // ----------------------------------------------------------------------- Termina las funcionalidades de todo el frame ELIMINAR ----------------------------------------------------------------------------- //
+    
+    
+    //  -------------------------------------------------------------------------- Funcionalidades de todo el frame COMPRAR ----------------------------------------------------------------------------- //
+    private void atrasComprarBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasComprarBtnMouseEntered
+        atrasComprarBtn.setBackground(Color.decode("#480000"));
+    }//GEN-LAST:event_atrasComprarBtnMouseEntered
+
+    private void atrasComprarBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasComprarBtnMouseExited
+        atrasComprarBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_atrasComprarBtnMouseExited
+
+    private void atrasComprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasComprarBtnActionPerformed
+        comprarFrame.setVisible(false);
+        setVisible(true);
+    }//GEN-LAST:event_atrasComprarBtnActionPerformed
+
+    public static int precioTotal = 0; // Declaracion de variable para el precio total para que el resto de los metodos tengan acceso a sus valores
+    private void comprarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarBtnActionPerformed
+        // Valida que el carrito tenga al menos un elemento para poder entrar a la opcion de comprar
+        if (camisas.isEmpty() && pantalones.isEmpty() && gorras.isEmpty() && sueteres.isEmpty() && calzados.isEmpty() && calzonetas.isEmpty()){
+                    JOptionPane.showMessageDialog(null, "No tienes nada agregado en tu carrito para comprar");
+        } else { // Caso contrario, mostramos todo lo que ha agregado al carrito, y el precio total que el pagara por todo
+            setVisible(false);
+            comprarFrame.pack();
+            comprarFrame.setVisible(true);
+            comprarFrame.setLocationRelativeTo(null);
+            nombreComprarTxtField.setText(""); edadComprarTxtField.setText(""); prspstoComprarTxtField.setText("");
+            comprarTxtArea.setText(""); comprarTxtArea.setEditable(false);
+            
+            for (int i = 0; i < camisas.size(); i++) { // Muestra solo Tipo, Cantidad, Color y Precio de la ropa agregada
+                comprarTxtArea.append("\n\nTipo: " + camisas.get(i).getTipo() + "   Cantidad: " + camisas.get(i).getCantidad() + "\nColor: " + camisas.get(i).getColor() + "    Precio: " + camisas.get(i).getPrecio());
+                precioTotal += camisas.get(i).getPrecio();
+            } 
+            for (int i = 0; i < pantalones.size(); i++) {
+                comprarTxtArea.append("\n\nTipo: " + pantalones.get(i).getTipo() + "   Cantidad: " + pantalones.get(i).getCantidad() + "\nColor: " + pantalones.get(i).getColor() + "    Precio: " + pantalones.get(i).getPrecio());
+                precioTotal += pantalones.get(i).getPrecio();
+            }
+            for (int i = 0; i < gorras.size(); i++) {
+                comprarTxtArea.append("\n\nTipo: " + gorras.get(i).getTipo() + "   Cantidad: " + gorras.get(i).getCantidad() + "\nColor: " + gorras.get(i).getColor() + "    Precio: " + gorras.get(i).getPrecio());
+                precioTotal += gorras.get(i).getPrecio();
+            }
+            for (int i = 0; i < sueteres.size(); i++) {
+                comprarTxtArea.append("\n\nTipo: " + sueteres.get(i).getTipo() + "   Cantidad: " + sueteres.get(i).getCantidad() + "\nColor: " + sueteres.get(i).getColor() + "    Precio: " + sueteres.get(i).getPrecio());
+                precioTotal += sueteres.get(i).getPrecio();
+            }
+            for (int i = 0; i < calzados.size(); i++) {
+                comprarTxtArea.append("\n\nTipo: " + calzados.get(i).getTipo() + "   Cantidad: " + calzados.get(i).getCantidad() + "\nColor: " + calzados.get(i).getColor() + "    Precio: " + calzados.get(i).getPrecio());
+                precioTotal += calzados.get(i).getPrecio();
+            }
+            for (int i = 0; i < calzonetas.size(); i++) {
+                comprarTxtArea.append("\n\nTipo: " + calzonetas.get(i).getTipo() + "   Cantidad: " + calzonetas.get(i).getCantidad() + "\nColor: " + calzonetas.get(i).getColor() + "    Precio: " + calzonetas.get(i).getPrecio());
+                precioTotal += calzonetas.get(i).getPrecio();
+            }
+            comprarTxtArea.append("\n\nPrecio total a pagar:   " + precioTotal);
+        }
+    }//GEN-LAST:event_comprarBtnActionPerformed
+
+    private void botonComprarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonComprarMouseEntered
+        botonComprar.setBackground(Color.BLACK);
+    }//GEN-LAST:event_botonComprarMouseEntered
+
+    private void botonComprarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonComprarMouseExited
+        botonComprar.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_botonComprarMouseExited
+
+    private void botonComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonComprarActionPerformed
+        // Validar si los campos de texto se han llenado, si no, no podra hacer la compra
+        if ((nombreComprarTxtField.getText().isBlank() && edadComprarTxtField.getText().isBlank() && prspstoComprarTxtField.getText().isBlank()) || nombreComprarTxtField.getText().isBlank() || edadComprarTxtField.getText().isBlank() || prspstoComprarTxtField.getText().isBlank()){
+            JOptionPane.showMessageDialog(null, "Error\nNo has ingresado tus datos. Por favor ingresa los datos requeridos");
+        } else if (Integer.parseInt(prspstoComprarTxtField.getText()) < precioTotal) { // Si el presupuesto es menor al precio total, no podra hacer la compra
+            JOptionPane.showMessageDialog(null, "No tienes suficiente dinero para comprar toda la ropa");
+        } else { // Caso en el que si cumpla con los requisitos para hacer la compra
+            int confirmacion = JOptionPane.showConfirmDialog(null, "Estas seguro que haras la compra?\nTu presupuesto: " + prspstoComprarTxtField.getText() +"\nPrecio que pagaras: " + precioTotal, "Confirmacion", JOptionPane.YES_NO_CANCEL_OPTION);
+            if (confirmacion == JOptionPane.YES_OPTION){ // Valida si el usuario ingreso la opcion SI para hacer la compra
+                JOptionPane.showMessageDialog(null, "¡Compra EXITOSA!\nA continuacion se mostrara tu factura");
+                
+                comprarFrame.setVisible(false);
+                facturaFrame.pack();
+                facturaFrame.setVisible(true);
+                facturaFrame.setLocationRelativeTo(null);
+                facturaTxtArea.setText("");
+                facturaTxtArea.setEditable(false);
+               
+                // Aqui conseguimos todos los datos de la persona que esta haciendo su compra
+                String nombre = nombreComprarTxtField.getText(); int edad = Integer.parseInt(edadComprarTxtField.getText());
+                int presupuesto = Integer.parseInt(prspstoComprarTxtField.getText());
+                
+                // Se genera el numero de factura con el metodo recursivo que se hizo en el main, convierte el numero a numero binario
+                int num = TiendaDeRopa.numrandom.nextInt(1001); 
+                String numFactura = TiendaDeRopa.numFacturaRecursivo(num); 
+                System.out.printf("Numero random Generado: " + num);
+                System.out.println("\nID: " + numFactura);
+                
+                /* Se muestra todos los datos de la persona dentro del TextArea como tipo factura y luego se borra todas las ropas de las listas
+                ya que la persona hizo su compra entonces esa ropa ya no estara dentro del carrito*/
+                facturaTxtArea.append((TiendaDeRopa.persona = new Persona(nombre, edad, numFactura, presupuesto, precioTotal, (presupuesto - precioTotal))).toString() + "\n\n ¡¡¡Gracias por preferirnos!!!");
+                camisas.clear(); pantalones.clear(); gorras.clear(); 
+                sueteres.clear(); calzados.clear(); calzonetas.clear();
+            }
+        }
+    }//GEN-LAST:event_botonComprarActionPerformed
+
+    private void atrasFacturaBtnMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasFacturaBtnMouseEntered
+        atrasFacturaBtn.setBackground(Color.decode("#480000"));
+    }//GEN-LAST:event_atrasFacturaBtnMouseEntered
+
+    private void atrasFacturaBtnMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atrasFacturaBtnMouseExited
+        atrasFacturaBtn.setBackground(Color.decode("#333333"));
+    }//GEN-LAST:event_atrasFacturaBtnMouseExited
+
+    private void atrasFacturaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasFacturaBtnActionPerformed
+        facturaFrame.setVisible(false);
+        setVisible(true);
+    }//GEN-LAST:event_atrasFacturaBtnActionPerformed
+    // ------------------------------------------------------------------ Termina todas las funcionalidades del frame COMPRAR -------------------------------------------------------------------------------------- //
     
     /**
      * @param args the command line arguments
@@ -1959,12 +2280,15 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JButton atrasCalzadoBtn;
     private javax.swing.JButton atrasClzntsBtn;
     private javax.swing.JButton atrasCmsasBtn;
+    private javax.swing.JButton atrasComprarBtn;
     private javax.swing.JButton atrasCtlgBtn;
     private javax.swing.JButton atrasElmnrCrrtoBtn;
+    private javax.swing.JButton atrasFacturaBtn;
     private javax.swing.JButton atrasGorrasBtn;
     private javax.swing.JButton atrasMstrrCrrtoBtn;
     private javax.swing.JButton atrasPntlnsBtn;
     private javax.swing.JButton atrasSueteresBtn;
+    private javax.swing.JButton botonComprar;
     private javax.swing.JButton calzadoBotasBtn;
     private javax.swing.JButton calzadoCtlgBtn;
     private javax.swing.JFrame calzadoCtlgFrame;
@@ -1992,17 +2316,31 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JButton clzntDprtvaBtn;
     private javax.swing.JButton clzntJeanBtn;
     private javax.swing.JButton comprarBtn;
+    private javax.swing.JPanel comprarFondoPanel;
+    private javax.swing.JFrame comprarFrame;
+    private javax.swing.JLabel comprarLabel;
+    private javax.swing.JPanel comprarPanel;
+    private javax.swing.JTextArea comprarTxtArea;
+    private javax.swing.JTextField edadComprarTxtField;
+    private javax.swing.JLabel edadLabel;
     private javax.swing.JButton eliminarBtn;
     private javax.swing.JFrame elmnrCarritoFrame;
     private javax.swing.JTextArea elmnrCarritoTxtArea;
     private javax.swing.JPanel elmnrCrrtoFondoPanel;
     private javax.swing.JLabel elmnrCrrtoLabel;
     private javax.swing.JPanel elmnrCrrtoPanel;
+    private javax.swing.JPanel facturaFondoPanel;
+    private javax.swing.JFrame facturaFrame;
+    private javax.swing.JLabel facturaLabel;
+    private javax.swing.JPanel facturaPanel;
+    private javax.swing.JTextArea facturaTxtArea;
     private javax.swing.JLabel fondoCalzadoLabel;
     private javax.swing.JLabel fondoClzntsLabel;
     private javax.swing.JLabel fondoCmsasLabel;
+    private javax.swing.JLabel fondoComprarLabel;
     private javax.swing.JLabel fondoCtlgLabel;
     private javax.swing.JLabel fondoElmnrCrrtoLabel;
+    private javax.swing.JLabel fondoFacturaLabel;
     private javax.swing.JLabel fondoGorrasLabel;
     private javax.swing.JLabel fondoLabel;
     private javax.swing.JLabel fondoMstrrCrrtoLabel;
@@ -2024,6 +2362,8 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JLabel menuTituloLabel;
     private javax.swing.JButton mostrarBtn;
@@ -2031,6 +2371,8 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JFrame mstrrCarritoFrame;
     private javax.swing.JPanel mstrrCrrtoFondoPanel;
     private javax.swing.JPanel mstrrCrrtoPanel;
+    private javax.swing.JTextField nombreComprarTxtField;
+    private javax.swing.JLabel nombreLabel;
     private javax.swing.JButton pantalonBusoBtn;
     private javax.swing.JButton pantalonCargoBtn;
     private javax.swing.JButton pantalonJeanBtn;
@@ -2039,6 +2381,9 @@ public class VentanaMenuTienda extends javax.swing.JFrame {
     private javax.swing.JFrame pantalonesCtlgFrame;
     private javax.swing.JLabel pantalonesLabel;
     private javax.swing.JPanel pantalonesPanel;
+    private javax.swing.JLabel presupuestoLabel;
+    private javax.swing.JTextField prspstoComprarTxtField;
+    private javax.swing.JLabel ropaComprarLabel;
     private javax.swing.JButton salirBtn;
     private javax.swing.JButton sueterCnCrmllraBtn;
     private javax.swing.JButton sueterHoodieBtn;
